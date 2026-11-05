@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khóa Học JavaScript Cơ Bản - Dành Cho Học Sinh</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo">
+      <span class="logo-icon">⚡</span>
+      <div class="logo-text">
+        <h1>JavaScript Cho Người Mới Bắt Đầu</h1>
+        <p>Học lập trình thật dễ &bull; Học đi đôi với hành</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="lessons/02-click-counter/index.html" class="btn btn-secondary">🎮 Mini Game Demo</a>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <!-- Cột bên trái: Danh mục bài học -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>📚 Danh Sách Bài Học</h2>
+      </div>
+      <ul class="lesson-list" id="lessonList">
+        <!-- Được tạo tự động bởi JavaScript -->
+      </ul>
+
+      <div class="tip-card">
+        <h3>💡 Mẹo lập trình:</h3>
+        <p>Nhấn phím <strong>F12</strong> (hoặc chuột phải chọn <em>Kiểm tra</em> &rarr; <em>Console</em>) để xem công cụ lập trình thật của trình duyệt!</p>
+      </div>
+    </aside>
+
+    <!-- Cột chính: Khung bài học và Trình chạy thử code -->
+    <section class="content-area">
+      <div class="lesson-intro-card">
+        <div class="lesson-header">
+          <span class="badge" id="lessonBadge">Bài 1</span>
+          <h2 id="lessonTitle">Xin chào JavaScript</h2>
+        </div>
+        <p id="lessonDesc" class="lesson-description"></p>
+        <div class="challenge-box" id="challengeBox">
+          <strong>🎯 Thử thách cho bạn:</strong>
+          <span id="lessonChallenge"></span>
+        </div>
+      </div>
+
+      <!-- Khu vực Code Playground -->
+      <div class="editor-console-grid">
+        <div class="editor-pane">
+          <div class="pane-header">
+            <span>💻 Mã Nguồn (JavaScript)</span>
+            <div class="pane-buttons">
+              <button id="resetCodeBtn" class="btn btn-sm btn-ghost" title="Khôi phục code gốc">🔄 Khôi phục</button>
+              <button id="runCodeBtn" class="btn btn-sm btn-primary">▶️ Chạy Code</button>
+            </div>
+          </div>
+          <textarea id="codeEditor" spellcheck="false" placeholder="// Gõ code JavaScript vào đây..."></textarea>
+        </div>
+
+        <div class="console-pane">
+          <div class="pane-header">
+            <span>🖥️ Màn Hình Kết Quả (Console Output)</span>
+            <button id="clearConsoleBtn" class="btn btn-sm btn-ghost">🧹 Xóa sạch</button>
+          </div>
+          <div id="consoleOutput" class="console-screen">
+            <div class="log-line log-system">Nhấn nút "▶️ Chạy Code" để xem kết quả tại đây...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

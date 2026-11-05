@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Game: Bấm Nút Đếm Số & Đổi Màu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container" id="gameBox">
+    <h1>🎯 Mini Game: Bấm Nút Tăng Điểm</h1>
+    <p class="subtitle">Thực hành tương tác DOM với JavaScript</p>
+
+    <div class="score-display">
+      <span class="score-label">Điểm số hiện tại</span>
+      <span class="score-value" id="score">0</span>
+    </div>
+
+    <div class="message-box" id="levelMessage">Hãy bấm nút để ghi điểm đầu tiên!</div>
+
+    <div class="button-group">
+      <button id="clickBtn" class="btn btn-primary">➕ Bấm để cộng điểm</button>
+      <button id="colorBtn" class="btn btn-secondary">🎨 Đổi màu nền</button>
+      <button id="resetBtn" class="btn btn-danger">🔄 Đặt lại từ đầu</button>
+    </div>
+
+    <div class="back-link">
+      <a href="../../index.html">&larr; Quay lại trang chủ khóa học</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "py-1",
+    "order": 1,
+    "classId": "Python",
+    "title": "Làm quen với lệnh print()",
+    "category": "Nhập môn Python",
+    "theory": "<h3>1. Python là gì?</h3><p>Python là ngôn ngữ lập trình phổ biến hàng đầu thế giới trong Trí tuệ nhân tạo (AI), Phân tích dữ liệu và Tự động hóa.</p><h3>2. Lệnh xuất dữ liệu: <code>print()</code></h3><p>Trong Python, dùng <code>print()</code> để in thông báo ra màn hình:</p><pre><code>print(\"Xin chào các bạn!\")</code></pre>",
+    "task": "Sử dụng lệnh <code>print()</code> để in ra chính xác dòng chữ: <strong>Xin chào MindX Python</strong>",
+    "initialCode": "# Viết code Python tại đây:\n\n",
+    "hint": "Gợi ý: print(\"Xin chào MindX Python\")",
+    "testCases": [
+      {
+        "id": "tc-py-1",
+        "name": "In ra đúng chuỗi 'Xin chào MindX Python'",
+        "type": "output_contains",
+        "expected": "Xin chào MindX Python"
+      }
+    ]
+  },
+  {
+    "id": "py-2",
+    "order": 2,
+    "classId": "Python",
+    "title": "Khai báo Biến trong Python",
+    "category": "Biến & Kiểu dữ liệu",
+    "theory": "<h3>Biến trong Python rất linh hoạt:</h3><p>Không cần từ khóa <code>let</code> hay <code>var</code>, chỉ cần đặt tên biến và gán giá trị bằng dấu <code>=</code>:</p><pre><code>ho_ten = \"Minh Khang\"\ntuoi = 13\nprint(ho_ten, tuoi)</code></pre>",
+    "task": "Tạo biến <code>ten_hoc_sinh</code> chứa tên bạn (chuỗi chữ) và biến <code>tuoi</code> chứa tuổi của bạn (số nguyên). Dùng lệnh <code>print(ten_hoc_sinh, tuoi)</code> để in ra.",
+    "initialCode": "# 1. Khai báo biến ten_hoc_sinh:\n\n# 2. Khai báo biến tuoi:\n\n# 3. In ra màn hình:\n",
+    "hint": "ten_hoc_sinh = \"Khang\"\ntuoi = 12\nprint(ten_hoc_sinh, tuoi)",
+    "testCases": [
+      {
+        "id": "tc-py-2-1",
+        "name": "Biến ten_hoc_sinh kiểu chuỗi (str)",
+        "type": "variable_type",
+        "varName": "ten_hoc_sinh",
+        "expectedType": "string"
+      },
+      {
+        "id": "tc-py-2-2",
+        "name": "Biến tuoi kiểu số nguyên (int)",
+        "type": "variable_type",
+        "varName": "tuoi",
+        "expectedType": "number"
+      }
+    ]
+  },
+  {
+    "id": "py-3",
+    "order": 3,
+    "classId": "Python",
+    "title": "Toán tử Số học trong Python",
+    "category": "Toán tử",
+    "theory": "<h3>Toán tử trong Python:</h3><ul><li>Cộng: <code>+</code>, Trừ: <code>-</code>, Nhân: <code>*</code>, Chia: <code>/</code></li><li>Chia lấy nguyên: <code>//</code>, Lũy thừa: <code>**</code></li></ul><pre><code>a = 10\nb = 4\nprint(a * b) # 40\nprint(a ** 2) # 100</code></pre>",
+    "task": "Cho hình chữ nhật có chiều dài <code>chieu_dai = 12</code> và chiều rộng <code>chieu_rong = 6</code>. Hãy tính diện tích và gán vào biến <code>dien_tich</code>, sau đó in ra.",
+    "initialCode": "chieu_dai = 12\nchieu_rong = 6\n\n# Tính diện tích hình chữ nhật:\ndien_tich = \n\nprint(\"Diện tích là:\", dien_tich)",
+    "hint": "dien_tich = chieu_dai * chieu_rong",
+    "testCases": [
+      {
+        "id": "tc-py-3",
+        "name": "dien_tich phải có giá trị bằng 72",
+        "type": "variable_value",
+        "varName": "dien_tich",
+        "expectedValue": 72
+      }
+    ]
+  },
+  {
+    "id": "py-4",
+    "order": 4,
+    "classId": "Python",
+    "title": "Cấu trúc Rẽ nhánh if - elif - else",
+    "category": "Logic Python",
+    "theory": "<h3>Quy tắc Thụt lề (Indentation) trong Python:</h3><p>Python dùng dấu hai chấm <code>:</code> và thụt lề 4 dấu cách thay cho dấu ngoặc nhọn:</p><pre><code>if diem >= 8:\n    xep_loai = \"Gioi\"\nelse:\n    xep_loai = \"Kha\"</code></pre>",
+    "task": "Cho biến <code>diem_so = 9</code>. Viết khối lệnh <code>if/else</code>: Nếu <code>diem_so >= 8</code> gán <code>danh_gia = \"XuatSac\"</code>, ngược lại gán <code>danh_gia = \"CanCoGang\"</code>.",
+    "initialCode": "diem_so = 9\ndanh_gia = \"\"\n\n# Viết câu lệnh if - else tại đây (chú ý thụt lề):\n\n",
+    "hint": "if diem_so >= 8:\n    danh_gia = \"XuatSac\"\nelse:\n    danh_gia = \"CanCoGang\"",
+    "testCases": [
+      {
+        "id": "tc-py-4",
+        "name": "Với điểm 9, biến danh_gia phải bằng 'XuatSac'",
+        "type": "variable_value",
+        "varName": "danh_gia",
+        "expectedValue": "XuatSac"
+      }
+    ]
+  },
+  {
+    "id": "py-5",
+    "order": 5,
+    "classId": "Python",
+    "title": "Vòng lặp for với range()",
+    "category": "Vòng lặp",
+    "theory": "<h3>Hàm range() trong Python:</h3><p><code>range(1, 6)</code> tạo dãy số từ 1 đến 5 (không bao gồm 6):</p><pre><code>for i in range(1, 6):\n    print(i)</code></pre>",
+    "task": "Sử dụng vòng lặp <code>for i in range(1, 6):</code> để tính tổng các số từ 1 đến 5 và gán vào biến <code>tong_so</code> (kết quả là 15).",
+    "initialCode": "tong_so = 0\n\n# Dùng vòng lặp for với range(1, 6) để cộng dồn vào tong_so:\n\nprint(\"Tổng là:\", tong_so)",
+    "hint": "for i in range(1, 6):\n    tong_so += i",
+    "testCases": [
+      {
+        "id": "tc-py-5",
+        "name": "tong_so phải bằng 15",
+        "type": "variable_value",
+        "varName": "tong_so",
+        "expectedValue": 15
+      }
+    ]
+  },
+  {
+    "id": "py-6",
+    "order": 6,
+    "classId": "Python",
+    "title": "Định nghĩa Hàm với def",
+    "category": "Hàm",
+    "theory": "<h3>Khai báo hàm trong Python:</h3><p>Dùng từ khóa <code>def</code> và kết thúc bằng <code>return</code>:</p><pre><code>def gap_doi(so):\n    return so * 2</code></pre>",
+    "task": "Viết hàm có tên <code>tinh_tong(a, b)</code> nhận vào 2 tham số và trả về tổng <code>a + b</code>.",
+    "initialCode": "# Định nghĩa hàm tinh_tong tại đây:\ndef tinh_tong(a, b):\n    pass\n\n# Chạy thử:\nprint(tinh_tong(15, 25))",
+    "hint": "def tinh_tong(a, b):\n    return a + b",
+    "testCases": [
+      {
+        "id": "tc-py-6-1",
+        "name": "tinh_tong(15, 25) trả về 40",
+        "type": "function_call",
+        "funcName": "tinh_tong",
+        "args": [15, 25],
+        "expectedValue": 40
+      },
+      {
+        "id": "tc-py-6-2",
+        "name": "tinh_tong(100, 250) trả về 350",
+        "type": "function_call",
+        "funcName": "tinh_tong",
+        "args": [100, 250],
+        "expectedValue": 350
+      }
+    ]
+  },
+  {
+    "id": "py-7",
+    "order": 7,
+    "classId": "Python",
+    "title": "Danh sách List trong Python",
+    "category": "Cấu trúc dữ liệu",
+    "theory": "<h3>List trong Python:</h3><p>List chứa danh sách các phần tử, đo độ dài bằng hàm <code>len()</code>:</p><pre><code>trai_cay = [\"Táo\", \"Cam\", \"Xoài\"]\nprint(len(trai_cay)) # 3</code></pre>",
+    "task": "Tạo một list có tên <code>danh_sach_ban</code> chứa ít nhất 3 tên bạn bè (chuỗi). Dùng hàm <code>len()</code> để lấy độ dài và gán vào biến <code>so_luong</code>.",
+    "initialCode": "# 1. Tạo danh_sach_ban:\ndanh_sach_ban = \n\n# 2. Lấy số lượng bằng len():\nso_luong = \n\nprint(danh_sach_ban, so_luong)",
+    "hint": "danh_sach_ban = [\"An\", \"Binh\", \"Chau\"]\nso_luong = len(danh_sach_ban)",
+    "testCases": [
+      {
+        "id": "tc-py-7-1",
+        "name": "danh_sach_ban là List có ít nhất 3 phần tử",
+        "type": "custom_eval",
+        "expression": "Array.isArray(danh_sach_ban) && danh_sach_ban.length >= 3"
+      },
+      {
+        "id": "tc-py-7-2",
+        "name": "so_luong bằng độ dài của danh_sach_ban",
+        "type": "custom_eval",
+        "expression": "so_luong === danh_sach_ban.length"
+      }
+    ]
+  }
+]

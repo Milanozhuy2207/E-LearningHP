@@ -1,0 +1,523 @@
+[
+  {
+    "id": "rob-1",
+    "order": 1,
+    "classId": "Robotics",
+    "title": "Từ Vựng Buổi 1 (Phần 1): Khởi Động & Quay Động Cơ",
+    "category": "Từ mới VEX GO - Buổi 1",
+    "vocab": [
+      { "word": "when", "meaning": "khi", "example": "when started (khi bắt đầu)" },
+      { "word": "start", "meaning": "bắt đầu", "example": "when start (khi bắt đầu chạy)" },
+      { "word": "motor", "meaning": "động cơ", "example": "spin motor (quay động cơ)" },
+      { "word": "spin", "meaning": "quay, quay tròn", "example": "spin motor forward (quay tròn động cơ tiến)" },
+      { "word": "forward", "meaning": "phía trước / đi về phía trước", "example": "spin motor forward" },
+      { "word": "reverse", "meaning": "đảo ngược / đi lùi, ngược lại", "example": "spin motor reverse" },
+      { "word": "stop", "meaning": "dừng lại", "example": "stop motor (dừng động cơ)" }
+    ],
+    "kidQuiz": [
+      {
+        "id": "q1",
+        "prompt": "1. Từ nào có nghĩa là \"khi\" (ví dụ: khi bắt đầu)?",
+        "options": ["when", "wait", "for", "set"],
+        "answer": "when"
+      },
+      {
+        "id": "q2",
+        "prompt": "2. Từ nào có nghĩa là \"bắt đầu\"?",
+        "options": ["stop", "start", "spin", "turn"],
+        "answer": "start"
+      },
+      {
+        "id": "q3",
+        "prompt": "3. Từ nào có nghĩa là \"động cơ\"?",
+        "options": ["Magnet", "motor", "object", "degrees"],
+        "answer": "motor"
+      },
+      {
+        "id": "q4",
+        "prompt": "4. Từ nào có nghĩa là \"quay, quay tròn\"?",
+        "options": ["spin", "stop", "set", "drop"],
+        "answer": "spin"
+      },
+      {
+        "id": "q5",
+        "prompt": "5. Từ nào có nghĩa là \"phía trước / đi về phía trước\"?",
+        "options": ["reverse", "forward", "left", "right"],
+        "answer": "forward"
+      },
+      {
+        "id": "q6",
+        "prompt": "6. Từ nào có nghĩa là \"đảo ngược / đi lùi, ngược lại\"?",
+        "options": ["forward", "reverse", "boost", "until"],
+        "answer": "reverse"
+      },
+      {
+        "id": "q7",
+        "prompt": "7. Từ nào có nghĩa là \"dừng lại\"?",
+        "options": ["start", "spin", "stop", "wait"],
+        "answer": "stop"
+      }
+    ],
+    "blockPuzzle": {
+      "instruction": "🧩 Bấm chọn 3 mảnh ghép theo đúng thứ tự để tạo khối lệnh: \"Quay tròn động cơ về phía trước\" (spin motor forward)",
+      "blockColor": "motion",
+      "slotsCount": 3,
+      "wordBank": ["motor", "spin", "forward", "reverse", "stop", "when"],
+      "expectedBlocks": ["spin", "motor", "forward"],
+      "robotDemo": "drive_forward"
+    },
+    "theory": "<h3>1. Nhóm từ mới: Sự kiện & Động cơ (Buổi 1)</h3><p>Trong phần mềm <strong>VEXcode GO / VEXcode IQ</strong>, các khối lệnh đều viết bằng tiếng Anh. Các con hãy bấm vào <strong>Thẻ Ghi Nhớ</strong> ở trên để lật thẻ và nghe phát âm 7 từ mới nhé:</p><table class=\"vocab-table\"><thead><tr><th>Từ tiếng Anh</th><th>Nghĩa tiếng Việt</th><th>Khối lệnh VEXcode mẫu</th></tr></thead><tbody><tr><td><code>when</code></td><td>khi</td><td><span class=\"vex-block event\">when started</span></td></tr><tr><td><code>start</code></td><td>bắt đầu</td><td><span class=\"vex-block event\">when start</span></td></tr><tr><td><code>motor</code></td><td>động cơ</td><td><span class=\"vex-block motion\">spin motor</span></td></tr><tr><td><code>spin</code></td><td>quay, quay tròn</td><td><span class=\"vex-block motion\">spin motor forward</span></td></tr><tr><td><code>forward</code></td><td>phía trước / đi về phía trước</td><td><span class=\"vex-block motion\">drive forward</span></td></tr><tr><td><code>reverse</code></td><td>đảo ngược / đi lùi, ngược lại</td><td><span class=\"vex-block motion\">spin motor reverse</span></td></tr><tr><td><code>stop</code></td><td>dừng lại</td><td><span class=\"vex-block motion\">stop motor</span></td></tr></tbody></table><h3>2. Cách ghép khối lệnh:</h3><p>Khi ghép <span class=\"vex-block motion\">spin</span> + <span class=\"vex-block motion\">motor</span> + <span class=\"vex-block motion\">forward</span>, robot hiểu là: <strong>\"Quay tròn động cơ về phía trước\"</strong>!</p>",
+    "task": "Ở bảng trò chơi bên phải, con chỉ cần <strong>bấm chuột chọn thẻ từ đúng</strong> cho 7 câu hỏi và <strong>lắp 3 mảnh ghép khối lệnh</strong> <code>spin</code> → <code>motor</code> → <code>forward</code> rồi bấm <strong>\"Nộp bài & Chấm điểm\"</strong> nhé!",
+    "initialCode": "",
+    "hint": "Chọn lần lượt: when, start, motor, spin, forward, reverse, stop. Khối lệnh: spin -> motor -> forward",
+    "testCases": [
+      { "id": "tc-rob-1-1", "name": "Câu 1: 'khi' = when", "type": "variable_value", "varName": "q1", "expectedValue": "when" },
+      { "id": "tc-rob-1-2", "name": "Câu 2: 'bắt đầu' = start", "type": "variable_value", "varName": "q2", "expectedValue": "start" },
+      { "id": "tc-rob-1-3", "name": "Câu 3: 'động cơ' = motor", "type": "variable_value", "varName": "q3", "expectedValue": "motor" },
+      { "id": "tc-rob-1-4", "name": "Câu 4: 'quay, quay tròn' = spin", "type": "variable_value", "varName": "q4", "expectedValue": "spin" },
+      { "id": "tc-rob-1-5", "name": "Câu 5: 'phía trước' = forward", "type": "variable_value", "varName": "q5", "expectedValue": "forward" },
+      { "id": "tc-rob-1-6", "name": "Câu 6: 'đảo ngược / đi lùi' = reverse", "type": "variable_value", "varName": "q6", "expectedValue": "reverse" },
+      { "id": "tc-rob-1-7", "name": "Câu 7: 'dừng lại' = stop", "type": "variable_value", "varName": "q7", "expectedValue": "stop" },
+      { "id": "tc-rob-1-8", "name": "Ghép đúng khối lệnh: [spin] [motor] [forward]", "type": "variable_value", "varName": "puzzle", "expectedValue": "spin motor forward" }
+    ]
+  },
+  {
+    "id": "rob-2",
+    "order": 2,
+    "classId": "Robotics",
+    "title": "Từ Vựng Buổi 1 (Phần 2): Vận Tốc, Góc Độ & Thời Gian Đợi",
+    "category": "Từ mới VEX GO - Buổi 1",
+    "vocab": [
+      { "word": "set", "meaning": "để, đặt", "example": "set motor velocity (đặt vận tốc động cơ)" },
+      { "word": "velocity", "meaning": "vận tốc, tốc độ", "example": "set velocity to 50%" },
+      { "word": "to", "meaning": "đến, để", "example": "set velocity to 80%" },
+      { "word": "for", "meaning": "cho, khoảng", "example": "spin forward for 90 degrees" },
+      { "word": "degrees", "meaning": "độ", "example": "90 degrees (90 độ)" },
+      { "word": "wait", "meaning": "đợi, chờ đợi", "example": "wait 1 second (đợi 1 giây)" },
+      { "word": "seconds", "meaning": "giây (số ít: second)", "example": "wait 3 seconds (đợi 3 giây)" }
+    ],
+    "kidQuiz": [
+      {
+        "id": "q1",
+        "prompt": "1. Từ nào có nghĩa là \"để, đặt\" (ví dụ: đặt tốc độ)?",
+        "options": ["set", "spin", "stop", "wait"],
+        "answer": "set"
+      },
+      {
+        "id": "q2",
+        "prompt": "2. Từ nào có nghĩa là \"vận tốc, tốc độ\"?",
+        "options": ["degrees", "velocity", "motor", "seconds"],
+        "answer": "velocity"
+      },
+      {
+        "id": "q3",
+        "prompt": "3. Từ nào có nghĩa là \"đến, để\" (trong khối lệnh set velocity to 80%)?",
+        "options": ["for", "to", "when", "until"],
+        "answer": "to"
+      },
+      {
+        "id": "q4",
+        "prompt": "4. Từ nào có nghĩa là \"cho, khoảng\" (ví dụ: quay khoảng 90 độ)?",
+        "options": ["for", "to", "set", "wait"],
+        "answer": "for"
+      },
+      {
+        "id": "q5",
+        "prompt": "5. Từ nào có nghĩa là \"độ\" (đơn vị đo góc quay 90 độ, 360 độ)?",
+        "options": ["seconds", "velocity", "degrees", "Rotation"],
+        "answer": "degrees"
+      },
+      {
+        "id": "q6",
+        "prompt": "6. Từ nào có nghĩa là \"đợi, chờ đợi\"?",
+        "options": ["when", "wait", "start", "spin"],
+        "answer": "wait"
+      },
+      {
+        "id": "q7",
+        "prompt": "7. Từ nào có nghĩa là \"giây\" (đơn vị thời gian)?",
+        "options": ["degrees", "seconds", "velocity", "motor"],
+        "answer": "seconds"
+      }
+    ],
+    "blockPuzzle": {
+      "instruction": "🧩 Bấm chọn 3 mảnh ghép để tạo khối lệnh: \"Đặt vận tốc đến 80%\" (set velocity to 80%)",
+      "blockColor": "motion",
+      "suffix": "80%",
+      "slotsCount": 3,
+      "wordBank": ["velocity", "set", "to", "wait", "degrees", "for"],
+      "expectedBlocks": ["set", "velocity", "to"],
+      "robotDemo": "velocity_spin"
+    },
+    "theory": "<h3>1. Nhóm từ mới: Thông số Vận tốc, Góc quay & Thời gian</h3><p>Để điều khiển động cơ quay đúng số <strong>độ</strong>, đúng <strong>vận tốc</strong> và biết <strong>chờ đợi</strong> theo số <strong>giây</strong>, các con cùng học 7 từ tiếp theo nhé:</p><table class=\"vocab-table\"><thead><tr><th>Từ tiếng Anh</th><th>Nghĩa tiếng Việt</th><th>Khối lệnh VEXcode mẫu</th></tr></thead><tbody><tr><td><code>set</code></td><td>để, đặt</td><td><span class=\"vex-block motion\">set velocity to 50%</span></td></tr><tr><td><code>velocity</code></td><td>vận tốc, tốc độ</td><td><span class=\"vex-block motion\">set motor velocity</span></td></tr><tr><td><code>to</code></td><td>đến, để</td><td><span class=\"vex-block motion\">set velocity to 100%</span></td></tr><tr><td><code>for</code></td><td>cho, khoảng</td><td><span class=\"vex-block motion\">spin forward for 90 degrees</span></td></tr><tr><td><code>degrees</code></td><td>độ</td><td><span class=\"vex-block motion\">for 360 degrees</span></td></tr><tr><td><code>wait</code></td><td>đợi, chờ đợi</td><td><span class=\"vex-block control\">wait 2 seconds</span></td></tr><tr><td><code>second</code> / <code>seconds</code></td><td>giây</td><td><span class=\"vex-block control\">wait 1 second</span></td></tr></tbody></table>",
+    "task": "Bấm chọn thẻ từ tiếng Anh đúng cho 7 câu hỏi bên phải và lắp khối lệnh <code>set</code> → <code>velocity</code> → <code>to</code> <code>80%</code> nhé!",
+    "initialCode": "",
+    "hint": "Chọn: set, velocity, to, for, degrees, wait, seconds. Khối lệnh: set -> velocity -> to",
+    "testCases": [
+      { "id": "tc-rob-2-1", "name": "Câu 1: 'để, đặt' = set", "type": "variable_value", "varName": "q1", "expectedValue": "set" },
+      { "id": "tc-rob-2-2", "name": "Câu 2: 'vận tốc, tốc độ' = velocity", "type": "variable_value", "varName": "q2", "expectedValue": "velocity" },
+      { "id": "tc-rob-2-3", "name": "Câu 3: 'đến, để' = to", "type": "variable_value", "varName": "q3", "expectedValue": "to" },
+      { "id": "tc-rob-2-4", "name": "Câu 4: 'cho, khoảng' = for", "type": "variable_value", "varName": "q4", "expectedValue": "for" },
+      { "id": "tc-rob-2-5", "name": "Câu 5: 'độ' = degrees", "type": "variable_value", "varName": "q5", "expectedValue": "degrees" },
+      { "id": "tc-rob-2-6", "name": "Câu 6: 'đợi, chờ đợi' = wait", "type": "variable_value", "varName": "q6", "expectedValue": "wait" },
+      { "id": "tc-rob-2-7", "name": "Câu 7: 'giây' = seconds", "type": "variable_value", "varName": "q7", "expectedValue": "seconds" },
+      { "id": "tc-rob-2-8", "name": "Ghép đúng khối lệnh: [set] [velocity] [to] 80%", "type": "variable_value", "varName": "puzzle", "expectedValue": "set velocity to" }
+    ]
+  },
+  {
+    "id": "rob-3",
+    "order": 3,
+    "classId": "Robotics",
+    "title": "Từ Vựng Buổi 2 (Phần 1): Xoay Hướng Trái/Phải & Dừng Xe",
+    "category": "Từ mới VEX GO - Buổi 2",
+    "vocab": [
+      { "word": "turn", "meaning": "xoay", "example": "turn right (xoay sang phải)" },
+      { "word": "left", "meaning": "bên trái", "example": "turn left for 90 degrees" },
+      { "word": "right", "meaning": "bên phải", "example": "turn right for 90 degrees" },
+      { "word": "Rotation", "meaning": "xoay vòng", "example": "1 Rotation = 1 vòng quay" },
+      { "word": "Stop driving", "meaning": "dừng lại (dừng xe)", "example": "Stop driving" }
+    ],
+    "kidQuiz": [
+      {
+        "id": "q1",
+        "prompt": "1. Từ nào có nghĩa là \"xoay\" (đổi hướng robot)?",
+        "options": ["spin", "turn", "forward", "wait"],
+        "answer": "turn"
+      },
+      {
+        "id": "q2",
+        "prompt": "2. Từ nào có nghĩa là \"bên trái\"?",
+        "options": ["right", "left", "forward", "reverse"],
+        "answer": "left"
+      },
+      {
+        "id": "q3",
+        "prompt": "3. Từ nào có nghĩa là \"bên phải\"?",
+        "options": ["left", "right", "boost", "drop"],
+        "answer": "right"
+      },
+      {
+        "id": "q4",
+        "prompt": "4. Từ nào có nghĩa là \"xoay vòng\"?",
+        "options": ["Velocity", "Rotation", "Magnet", "degrees"],
+        "answer": "Rotation"
+      },
+      {
+        "id": "q5",
+        "prompt": "5. Cụm từ nào có nghĩa là \"dừng lại\" (dừng xe đang chạy)?",
+        "options": ["when start", "wait until", "Stop driving", "spin motor"],
+        "answer": "Stop driving"
+      }
+    ],
+    "blockPuzzle": {
+      "instruction": "🧩 Bấm chọn 4 mảnh ghép để tạo khối lệnh: \"Xoay bên phải khoảng 90 độ\" (turn right for 90 degrees)",
+      "blockColor": "motion",
+      "slotsCount": 4,
+      "wordBank": ["right", "turn", "for", "90 degrees", "left", "Stop driving"],
+      "expectedBlocks": ["turn", "right", "for", "90 degrees"],
+      "robotDemo": "turn_right"
+    },
+    "theory": "<h3>1. Nhóm từ mới: Điều hướng Robot di chuyển (Buổi 2)</h3><p>Khi lắp ráp robot có 2 bánh xe, ngoài đi thẳng (<code>forward</code>) và đi lùi (<code>reverse</code>), robot còn có thể <strong>xoay trái</strong>, <strong>xoay phải</strong>, đếm số <strong>vòng xoay</strong> và <strong>dừng xe</strong>:</p><table class=\"vocab-table\"><thead><tr><th>Từ tiếng Anh</th><th>Nghĩa tiếng Việt</th><th>Khối lệnh VEXcode mẫu</th></tr></thead><tbody><tr><td><code>turn</code></td><td>xoay</td><td><span class=\"vex-block motion\">turn right</span></td></tr><tr><td><code>left</code></td><td>bên trái</td><td><span class=\"vex-block motion\">turn left for 90 degrees</span></td></tr><tr><td><code>right</code></td><td>bên phải</td><td><span class=\"vex-block motion\">turn right for 90 degrees</span></td></tr><tr><td><code>Rotation</code></td><td>xoay vòng</td><td><span class=\"vex-block motion\">spin for 2 Rotations</span></td></tr><tr><td><code>Stop driving</code></td><td>dừng lại</td><td><span class=\"vex-block motion\">Stop driving</span></td></tr></tbody></table>",
+    "task": "Chọn thẻ từ đúng cho 5 câu hỏi bên phải và lắp khối lệnh <code>turn</code> → <code>right</code> → <code>for</code> → <code>90 degrees</code> nhé!",
+    "initialCode": "",
+    "hint": "Chọn: turn, left, right, Rotation, Stop driving. Khối lệnh: turn -> right -> for -> 90 degrees",
+    "testCases": [
+      { "id": "tc-rob-3-1", "name": "Câu 1: 'xoay' = turn", "type": "variable_value", "varName": "q1", "expectedValue": "turn" },
+      { "id": "tc-rob-3-2", "name": "Câu 2: 'bên trái' = left", "type": "variable_value", "varName": "q2", "expectedValue": "left" },
+      { "id": "tc-rob-3-3", "name": "Câu 3: 'bên phải' = right", "type": "variable_value", "varName": "q3", "expectedValue": "right" },
+      { "id": "tc-rob-3-4", "name": "Câu 4: 'xoay vòng' = Rotation", "type": "variable_value", "varName": "q4", "expectedValue": "Rotation" },
+      { "id": "tc-rob-3-5", "name": "Câu 5: 'dừng lại (dừng xe)' = Stop driving", "type": "variable_value", "varName": "q5", "expectedValue": "Stop driving" },
+      { "id": "tc-rob-3-6", "name": "Ghép đúng khối lệnh: [turn] [right] [for] [90 degrees]", "type": "variable_value", "varName": "puzzle", "expectedValue": "turn right for 90 degrees" }
+    ]
+  },
+  {
+    "id": "rob-4",
+    "order": 4,
+    "classId": "Robotics",
+    "title": "Từ Vựng Buổi 2 (Phần 2): Cảm Biến Va Chạm LED Bumper",
+    "category": "Từ mới VEX GO - Buổi 2",
+    "vocab": [
+      { "word": "wait until", "meaning": "đợi cho đến khi", "example": "wait until <LEDbumber pressed?>" },
+      { "word": "LEDbumber", "meaning": "cảm biến bumber", "example": "LEDbumber pressed? (cảm biến bumber được nhấn?)" },
+      { "word": "pressed", "meaning": "được nhấn", "example": "LEDbumber pressed (nút cảm biến được nhấn)" }
+    ],
+    "kidQuiz": [
+      {
+        "id": "q1",
+        "prompt": "1. Cụm từ nào có nghĩa là \"đợi cho đến khi\"?",
+        "options": ["when start", "wait until", "Stop driving", "if-then"],
+        "answer": "wait until"
+      },
+      {
+        "id": "q2",
+        "prompt": "2. Từ nào có nghĩa là \"cảm biến bumber\" (nút cảm biến có đèn LED)?",
+        "options": ["Magnet", "LEDbumber", "motor", "object"],
+        "answer": "LEDbumber"
+      },
+      {
+        "id": "q3",
+        "prompt": "3. Từ nào có nghĩa là \"được nhấn\"?",
+        "options": ["pressed", "forward", "reverse", "boost"],
+        "answer": "pressed"
+      },
+      {
+        "id": "q4",
+        "prompt": "4. Khi ghép \"LEDbumber pressed\", câu này có nghĩa tiếng Việt là gì?",
+        "options": [
+          "cảm biến bumber được nhấn",
+          "quay tròn động cơ",
+          "đặt vận tốc",
+          "nam châm hút vật thể"
+        ],
+        "answer": "cảm biến bumber được nhấn"
+      }
+    ],
+    "blockPuzzle": {
+      "instruction": "🧩 Bấm chọn 3 mảnh ghép theo đúng thứ tự: \"Đợi cho đến khi cảm biến bumber được nhấn\" (wait until LEDbumber pressed)",
+      "blockColor": "control",
+      "slotsCount": 3,
+      "wordBank": ["LEDbumber", "wait until", "pressed", "forever", "stop", "motor"],
+      "expectedBlocks": ["wait until", "LEDbumber", "pressed"],
+      "robotDemo": "bumper_start"
+    },
+    "theory": "<h3>1. Nhóm từ mới: Cảm biến LED Bumper (Buổi 2)</h3><p>Trên robot VEX GO có một công tắc cảm biến va chạm có đèn LED gọi là <strong>LED Bumper</strong> (trong thẻ từ vựng viết là <code>LEDbumber</code>). Khi con nhấn tay vào cảm biến này, robot mới bắt đầu chạy!</p><table class=\"vocab-table\"><thead><tr><th>Từ tiếng Anh</th><th>Nghĩa tiếng Việt</th><th>Khối lệnh VEXcode mẫu</th></tr></thead><tbody><tr><td><code>wait until</code></td><td>đợi cho đến khi</td><td><span class=\"vex-block control\">wait until &lt;...&gt;</span></td></tr><tr><td><code>LEDbumber</code></td><td>cảm biến bumber</td><td><span class=\"vex-block sensor\">LEDbumber pressed?</span></td></tr><tr><td><code>pressed</code></td><td>được nhấn</td><td><span class=\"vex-block sensor\">LEDbumber pressed?</span></td></tr></tbody></table><h3>2. Ghép cả cụm lệnh:</h3><p><span class=\"vex-block control\">wait until</span> + <span class=\"vex-block sensor\">LEDbumber pressed?</span> = <strong>\"Đợi cho đến khi cảm biến bumber được nhấn\"</strong>.</p>",
+    "task": "Chọn đáp án đúng cho 4 câu hỏi bên phải và lắp khối lệnh <code>wait until</code> → <code>LEDbumber</code> → <code>pressed</code> nhé!",
+    "initialCode": "",
+    "hint": "Chọn: wait until, LEDbumber, pressed, cảm biến bumber được nhấn. Khối lệnh: wait until -> LEDbumber -> pressed",
+    "testCases": [
+      { "id": "tc-rob-4-1", "name": "Câu 1: 'đợi cho đến khi' = wait until", "type": "variable_value", "varName": "q1", "expectedValue": "wait until" },
+      { "id": "tc-rob-4-2", "name": "Câu 2: 'cảm biến bumber' = LEDbumber", "type": "variable_value", "varName": "q2", "expectedValue": "LEDbumber" },
+      { "id": "tc-rob-4-3", "name": "Câu 3: 'được nhấn' = pressed", "type": "variable_value", "varName": "q3", "expectedValue": "pressed" },
+      { "id": "tc-rob-4-4", "name": "Câu 4: 'LEDbumber pressed' = cảm biến bumber được nhấn", "type": "variable_value", "varName": "q4", "expectedValue": "cảm biến bumber được nhấn" },
+      { "id": "tc-rob-4-5", "name": "Ghép đúng khối lệnh: [wait until] [LEDbumber] [pressed]", "type": "variable_value", "varName": "puzzle", "expectedValue": "wait until LEDbumber pressed" }
+    ]
+  },
+  {
+    "id": "rob-5",
+    "order": 5,
+    "classId": "Robotics",
+    "title": "Từ Vựng Buổi 8: Nam Châm Điện (Electromagnet)",
+    "category": "Từ mới VEX GO - Buổi 8",
+    "vocab": [
+      { "word": "Magnet", "meaning": "nam châm", "example": "energize Magnet to boost" },
+      { "word": "energize", "meaning": "làm mạnh mẽ (kích hoạt điện)", "example": "energize Magnet" },
+      { "word": "boost", "meaning": "tăng cường, thúc đẩy (hút vào)", "example": "energize Magnet to boost" },
+      { "word": "drop", "meaning": "rơi, bỏ (thả ra)", "example": "energize Magnet to drop" }
+    ],
+    "kidQuiz": [
+      {
+        "id": "q1",
+        "prompt": "1. Từ nào có nghĩa là \"nam châm\"?",
+        "options": ["motor", "Magnet", "object", "LEDbumber"],
+        "answer": "Magnet"
+      },
+      {
+        "id": "q2",
+        "prompt": "2. Từ nào có nghĩa là \"làm mạnh mẽ\" (cấp điện cho nam châm hoạt động)?",
+        "options": ["energize", "spin", "reverse", "wait"],
+        "answer": "energize"
+      },
+      {
+        "id": "q3",
+        "prompt": "3. Từ nào có nghĩa là \"tăng cường, thúc đẩy\" (dùng khi muốn nam châm HÚT đĩa sắt)?",
+        "options": ["drop", "stop", "boost", "left"],
+        "answer": "boost"
+      },
+      {
+        "id": "q4",
+        "prompt": "4. Từ nào có nghĩa là \"rơi, bỏ\" (dùng khi muốn nam châm THẢ đĩa sắt ra)?",
+        "options": ["boost", "drop", "forward", "turn"],
+        "answer": "drop"
+      }
+    ],
+    "blockPuzzle": {
+      "instruction": "🧩 Bấm chọn 4 mảnh ghép để tạo khối lệnh HÚT nam châm: \"energize Magnet to boost\"",
+      "blockColor": "magnet",
+      "slotsCount": 4,
+      "wordBank": ["Magnet", "energize", "to", "boost", "drop", "spin"],
+      "expectedBlocks": ["energize", "Magnet", "to", "boost"],
+      "robotDemo": "magnet_boost"
+    },
+    "theory": "<h3>1. Nhóm từ mới: Nam châm điện VEX GO (Buổi 8)</h3><p>Trong Buổi 8, robot VEX GO có thêm <strong>Nam châm điện (Magnet)</strong> để hút và thả các đĩa kim loại:</p><table class=\"vocab-table\"><thead><tr><th>Từ tiếng Anh</th><th>Nghĩa tiếng Việt</th><th>Ý nghĩa trên Robot VEX GO</th></tr></thead><tbody><tr><td><code>Magnet</code></td><td>nam châm</td><td>Cơ cấu nam châm điện gắn trên robot</td></tr><tr><td><code>energize</code></td><td>làm mạnh mẽ</td><td>Cấp điện / kích hoạt nam châm</td></tr><tr><td><code>boost</code></td><td>tăng cường, thúc đẩy</td><td>Tăng lực từ để <strong>HÚT</strong> đĩa kim loại lên</td></tr><tr><td><code>drop</code></td><td>rơi, bỏ</td><td>Ngắt từ trường để <strong>THẢ</strong> đĩa rơi xuống</td></tr></tbody></table><h3>2. Khối lệnh chuẩn trong VEXcode GO:</h3><ul><li>Hút đĩa: <span class=\"vex-block magnet\">energize Magnet to boost</span></li><li>Thả đĩa: <span class=\"vex-block magnet\">energize Magnet to drop</span></li></ul>",
+    "task": "Chọn thẻ từ đúng cho 4 câu hỏi bên phải và lắp khối lệnh nam châm hút <code>energize</code> → <code>Magnet</code> → <code>to</code> → <code>boost</code> nhé!",
+    "initialCode": "",
+    "hint": "Chọn: Magnet, energize, boost, drop. Khối lệnh: energize -> Magnet -> to -> boost",
+    "testCases": [
+      { "id": "tc-rob-5-1", "name": "Câu 1: 'nam châm' = Magnet", "type": "variable_value", "varName": "q1", "expectedValue": "Magnet" },
+      { "id": "tc-rob-5-2", "name": "Câu 2: 'làm mạnh mẽ' = energize", "type": "variable_value", "varName": "q2", "expectedValue": "energize" },
+      { "id": "tc-rob-5-3", "name": "Câu 3: 'tăng cường, thúc đẩy (hút)' = boost", "type": "variable_value", "varName": "q3", "expectedValue": "boost" },
+      { "id": "tc-rob-5-4", "name": "Câu 4: 'rơi, bỏ (thả)' = drop", "type": "variable_value", "varName": "q4", "expectedValue": "drop" },
+      { "id": "tc-rob-5-5", "name": "Ghép đúng khối lệnh: [energize] [Magnet] [to] [boost]", "type": "variable_value", "varName": "puzzle", "expectedValue": "energize Magnet to boost" }
+    ]
+  },
+  {
+    "id": "rob-6",
+    "order": 6,
+    "classId": "Robotics",
+    "title": "Từ Vựng Buổi 9: Vòng Lặp Forever, Điều Kiện If-Then & Vật Thể",
+    "category": "Từ mới VEX GO - Buổi 9",
+    "vocab": [
+      { "word": "forever", "meaning": "mãi mãi, liên tục", "example": "forever (lặp lại mãi mãi)" },
+      { "word": "if-then", "meaning": "nếu-thì", "example": "if <thấy vật thể> then <dừng lại>" },
+      { "word": "until", "meaning": "cho đến khi", "example": "wait until / repeat until" },
+      { "word": "object", "meaning": "vật thể", "example": "Eye found object? (Thấy vật thể?)" },
+      { "word": "Velocity", "meaning": "vận tốc, tốc độ", "example": "set drive Velocity" }
+    ],
+    "kidQuiz": [
+      {
+        "id": "q1",
+        "prompt": "1. Từ nào có nghĩa là \"mãi mãi, liên tục\" (vòng lặp chạy hoài không nghỉ)?",
+        "options": ["forever", "until", "when", "wait"],
+        "answer": "forever"
+      },
+      {
+        "id": "q2",
+        "prompt": "2. Cụm từ nào có nghĩa là \"nếu-thì\" (dùng để kiểm tra điều kiện)?",
+        "options": ["wait until", "if-then", "when start", "Stop driving"],
+        "answer": "if-then"
+      },
+      {
+        "id": "q3",
+        "prompt": "3. Từ nào có nghĩa là \"cho đến khi\"?",
+        "options": ["forever", "until", "for", "to"],
+        "answer": "until"
+      },
+      {
+        "id": "q4",
+        "prompt": "4. Từ nào có nghĩa là \"vật thể\" (chướng ngại vật phía trước robot)?",
+        "options": ["Magnet", "motor", "object", "Rotation"],
+        "answer": "object"
+      },
+      {
+        "id": "q5",
+        "prompt": "5. Từ \"Velocity\" có nghĩa tiếng Việt là gì?",
+        "options": ["xoay vòng", "vận tốc, tốc độ", "nam châm", "cảm biến bumber"],
+        "answer": "vận tốc, tốc độ"
+      }
+    ],
+    "blockPuzzle": {
+      "instruction": "🧩 Bấm chọn 4 mảnh ghép để tạo kịch bản: \"Lặp mãi mãi (forever): Nếu-thì (if-then) gặp vật thể (object) -> Dừng lại (Stop driving)\"",
+      "blockColor": "control",
+      "slotsCount": 4,
+      "wordBank": ["if-then", "forever", "object", "Stop driving", "boost", "reverse"],
+      "expectedBlocks": ["forever", "if-then", "object", "Stop driving"],
+      "robotDemo": "forever_object"
+    },
+    "theory": "<h3>1. Nhóm từ mới: Tự hành & Cảm biến Vật thể (Buổi 9)</h3><p>Ở Buổi 9, robot tự động kiểm tra <strong>vật thể (object)</strong> liên tục bằng vòng lặp <strong>forever</strong> và khối điều kiện <strong>if-then</strong>:</p><table class=\"vocab-table\"><thead><tr><th>Từ tiếng Anh</th><th>Nghĩa tiếng Việt</th><th>Khối lệnh VEXcode mẫu</th></tr></thead><tbody><tr><td><code>forever</code></td><td>mãi mãi, liên tục</td><td><span class=\"vex-block control\">forever</span> (Lặp lại liên tục)</td></tr><tr><td><code>if-then</code></td><td>nếu-thì</td><td><span class=\"vex-block control\">if &lt;...&gt; then</span> (Nếu đúng thì làm)</td></tr><tr><td><code>until</code></td><td>cho đến khi</td><td><span class=\"vex-block control\">wait until &lt;...&gt;</span></td></tr><tr><td><code>object</code></td><td>vật thể</td><td><span class=\"vex-block sensor\">Eye found object?</span> (Thấy vật thể?)</td></tr><tr><td><code>Velocity</code></td><td>vận tốc, tốc độ</td><td><span class=\"vex-block motion\">set Velocity</span></td></tr></tbody></table>",
+    "task": "Chọn thẻ từ đúng cho 5 câu hỏi bên phải và lắp 4 mảnh ghép logic: <code>forever</code> → <code>if-then</code> → <code>object</code> → <code>Stop driving</code> nhé!",
+    "initialCode": "",
+    "hint": "Chọn: forever, if-then, until, object, vận tốc, tốc độ. Khối lệnh: forever -> if-then -> object -> Stop driving",
+    "testCases": [
+      { "id": "tc-rob-6-1", "name": "Câu 1: 'mãi mãi, liên tục' = forever", "type": "variable_value", "varName": "q1", "expectedValue": "forever" },
+      { "id": "tc-rob-6-2", "name": "Câu 2: 'nếu-thì' = if-then", "type": "variable_value", "varName": "q2", "expectedValue": "if-then" },
+      { "id": "tc-rob-6-3", "name": "Câu 3: 'cho đến khi' = until", "type": "variable_value", "varName": "q3", "expectedValue": "until" },
+      { "id": "tc-rob-6-4", "name": "Câu 4: 'vật thể' = object", "type": "variable_value", "varName": "q4", "expectedValue": "object" },
+      { "id": "tc-rob-6-5", "name": "Câu 5: 'Velocity' = vận tốc, tốc độ", "type": "variable_value", "varName": "q5", "expectedValue": "vận tốc, tốc độ" },
+      { "id": "tc-rob-6-6", "name": "Ghép đúng khối lệnh: [forever] [if-then] [object] [Stop driving]", "type": "variable_value", "varName": "puzzle", "expectedValue": "forever if-then object Stop driving" }
+    ]
+  },
+  {
+    "id": "rob-7",
+    "order": 7,
+    "classId": "Robotics",
+    "title": "Thử Thách Về Đích: Siêu Trí Nhớ Từ Vựng VEX GO (Buổi 1, 2, 8, 9)",
+    "category": "Tổng kết Từ vựng VEX GO",
+    "vocab": [
+      { "word": "when start", "meaning": "khi bắt đầu", "example": "Sự kiện mở đầu chương trình" },
+      { "word": "spin motor forward", "meaning": "quay tròn động cơ về phía trước", "example": "Di chuyển tiến lên" },
+      { "word": "wait until LEDbumber pressed", "meaning": "đợi cho đến khi cảm biến bumber được nhấn", "example": "Chờ nhấn nút cảm biến" },
+      { "word": "energize Magnet to boost", "meaning": "làm mạnh mẽ nam châm để tăng cường (hút)", "example": "Hút đĩa kim loại" },
+      { "word": "energize Magnet to drop", "meaning": "làm mạnh mẽ nam châm để rơi, bỏ (thả)", "example": "Thả đĩa kim loại" },
+      { "word": "Stop driving", "meaning": "dừng lại", "example": "Dừng robot khi hoàn thành" }
+    ],
+    "kidQuiz": [
+      {
+        "id": "q1",
+        "prompt": "1. Cụm lệnh \"spin motor reverse\" có nghĩa là gì?",
+        "options": [
+          "Quay tròn động cơ đi lùi (đảo ngược)",
+          "Quay tròn động cơ về phía trước",
+          "Dừng động cơ lại",
+          "Đặt vận tốc động cơ"
+        ],
+        "answer": "Quay tròn động cơ đi lùi (đảo ngược)"
+      },
+      {
+        "id": "q2",
+        "prompt": "2. Muốn robot \"Xoay bên trái khoảng 90 độ\", ta chọn khối lệnh nào?",
+        "options": [
+          "turn left for 90 degrees",
+          "turn right for 90 degrees",
+          "wait 90 seconds",
+          "set velocity to 90"
+        ],
+        "answer": "turn left for 90 degrees"
+      },
+      {
+        "id": "q3",
+        "prompt": "3. Muốn \"Đợi cho đến khi cảm biến bumber được nhấn\", ta chọn khối lệnh nào?",
+        "options": [
+          "wait until LEDbumber pressed",
+          "energize Magnet to boost",
+          "forever if-then object",
+          "spin motor forward"
+        ],
+        "answer": "wait until LEDbumber pressed"
+      },
+      {
+        "id": "q4",
+        "prompt": "4. Muốn Nam châm điện HÚT đĩa sắt lên (tăng cường), ta dùng khối lệnh nào?",
+        "options": [
+          "energize Magnet to drop",
+          "energize Magnet to boost",
+          "Stop driving",
+          "wait 2 seconds"
+        ],
+        "answer": "energize Magnet to boost"
+      },
+      {
+        "id": "q5",
+        "prompt": "5. Muốn Nam châm điện THẢ đĩa sắt rơi xuống (rơi, bỏ), ta dùng khối lệnh nào?",
+        "options": [
+          "energize Magnet to boost",
+          "energize Magnet to drop",
+          "turn right",
+          "set velocity"
+        ],
+        "answer": "energize Magnet to drop"
+      }
+    ],
+    "blockPuzzle": {
+      "instruction": "🧩 Sắp xếp 5 khối lệnh theo đúng thứ tự nhiệm vụ: (1) Khi bắt đầu -> (2) Tiến lên -> (3) Hút đĩa nam châm -> (4) Thả đĩa nam châm -> (5) Dừng lại",
+      "blockColor": "event",
+      "slotsCount": 5,
+      "wordBank": [
+        "spin motor forward",
+        "when start",
+        "energize Magnet to boost",
+        "Stop driving",
+        "energize Magnet to drop"
+      ],
+      "expectedBlocks": [
+        "when start",
+        "spin motor forward",
+        "energize Magnet to boost",
+        "energize Magnet to drop",
+        "Stop driving"
+      ],
+      "robotDemo": "full_mission"
+    },
+    "theory": "<h3>Tổng kết Siêu Trí Nhớ Từ Vựng VEX GO!</h3><p>Chúc mừng con đã đi đến thử thách cuối cùng! Hãy ôn lại 5 cụm khối lệnh quan trọng nhất của cả 4 buổi học:</p><ol><li><span class=\"vex-block event\">when start</span> : Khi bắt đầu</li><li><span class=\"vex-block motion\">spin motor forward</span> : Quay tròn động cơ về phía trước</li><li><span class=\"vex-block magnet\">energize Magnet to boost</span> : Làm mạnh mẽ nam châm để tăng cường (Hút đĩa)</li><li><span class=\"vex-block magnet\">energize Magnet to drop</span> : Làm mạnh mẽ nam châm để rơi, bỏ (Thả đĩa)</li><li><span class=\"vex-block motion\">Stop driving</span> : Dừng lại</li></ol>",
+    "task": "Hoàn thành 5 câu hỏi tổng kết và sắp xếp 5 khối lệnh theo đúng thứ tự nhiệm vụ để điều khiển Robot VEX GO đi hút đĩa từ và về đích nhé!",
+    "initialCode": "",
+    "hint": "Thứ tự 5 khối lệnh: when start -> spin motor forward -> energize Magnet to boost -> energize Magnet to drop -> Stop driving",
+    "testCases": [
+      { "id": "tc-rob-7-1", "name": "Câu 1: 'spin motor reverse' = Quay tròn động cơ đi lùi (đảo ngược)", "type": "variable_value", "varName": "q1", "expectedValue": "Quay tròn động cơ đi lùi (đảo ngược)" },
+      { "id": "tc-rob-7-2", "name": "Câu 2: 'Xoay bên trái 90 độ' = turn left for 90 degrees", "type": "variable_value", "varName": "q2", "expectedValue": "turn left for 90 degrees" },
+      { "id": "tc-rob-7-3", "name": "Câu 3: 'Đợi cảm biến bumber được nhấn' = wait until LEDbumber pressed", "type": "variable_value", "varName": "q3", "expectedValue": "wait until LEDbumber pressed" },
+      { "id": "tc-rob-7-4", "name": "Câu 4: 'Nam châm hút đĩa' = energize Magnet to boost", "type": "variable_value", "varName": "q4", "expectedValue": "energize Magnet to boost" },
+      { "id": "tc-rob-7-5", "name": "Câu 5: 'Nam châm thả đĩa' = energize Magnet to drop", "type": "variable_value", "varName": "q5", "expectedValue": "energize Magnet to drop" },
+      { "id": "tc-rob-7-6", "name": "Sắp xếp đúng 5 khối lệnh nhiệm vụ Robot VEX GO", "type": "variable_value", "varName": "puzzle", "expectedValue": "when start spin motor forward energize Magnet to boost energize Magnet to drop Stop driving" }
+    ]
+  }
+]

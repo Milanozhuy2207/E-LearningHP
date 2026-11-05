@@ -1,0 +1,162 @@
+[
+  {
+    "id": "uni-1",
+    "order": 1,
+    "classId": "Unity",
+    "title": "Xuất Log trong Unity với Debug.Log",
+    "category": "Nhập môn Unity C#",
+    "theory": "<h3>1. Unity & Ngôn ngữ C#</h3><p>Unity là công cụ làm game 2D/3D số 1 thế giới. Trong Unity, chúng ta dùng ngôn ngữ C# để điều khiển nhân vật và logic game.</p><h3>2. Lệnh in thông báo: <code>Debug.Log()</code></h3><p>Dùng để xuất thông điệp ra cửa sổ Console của Unity Editor:</p><pre><code>Debug.Log(\"Game đã bắt đầu!\");</code></pre>",
+    "task": "Sử dụng lệnh <code>Debug.Log()</code> để in ra chính xác dòng chữ: <strong>Xin chào MindX Unity</strong>",
+    "initialCode": "// Viết code C# Unity tại đây:\n\n",
+    "hint": "Gợi ý: Debug.Log(\"Xin chào MindX Unity\");",
+    "testCases": [
+      {
+        "id": "tc-uni-1",
+        "name": "In ra đúng chuỗi 'Xin chào MindX Unity'",
+        "type": "output_contains",
+        "expected": "Xin chào MindX Unity"
+      }
+    ]
+  },
+  {
+    "id": "uni-2",
+    "order": 2,
+    "classId": "Unity",
+    "title": "Khai báo Chỉ số Nhân vật (C# Types)",
+    "category": "Biến & Dữ liệu Game",
+    "theory": "<h3>Kiểu dữ liệu định kiểu tĩnh trong C#:</h3><ul><li><code>int</code>: Số nguyên (Máu HP, level, vàng)</li><li><code>float</code>: Số thực (Tốc độ chạy, thời gian hồi chiêu - có đuôi <code>f</code>)</li><li><code>string</code>: Chuỗi chữ (Tên nhân vật)</li><li><code>bool</code>: Đúng/sai (<code>true</code> / <code>false</code>)</li></ul><pre><code>int hp = 100;\nfloat speed = 7.5f;\nstring heroName = \"Arthur\";</code></pre>",
+    "task": "Khai báo biến <code>playerName</code> là chuỗi tên chiến binh của bạn, và biến <code>hp</code> là số nguyên máu nhân vật (ví dụ 100). Sau đó dùng <code>Debug.Log(playerName + \" HP: \" + hp);</code>.",
+    "initialCode": "// 1. Khai báo playerName:\n\n// 2. Khai báo hp:\n\n// 3. In ra Console Unity:\n",
+    "hint": "string playerName = \"Knight\";\nint hp = 100;\nDebug.Log(playerName + \" \" + hp);",
+    "testCases": [
+      {
+        "id": "tc-uni-2-1",
+        "name": "Biến playerName kiểu string",
+        "type": "variable_type",
+        "varName": "playerName",
+        "expectedType": "string"
+      },
+      {
+        "id": "tc-uni-2-2",
+        "name": "Biến hp kiểu int (number)",
+        "type": "variable_type",
+        "varName": "hp",
+        "expectedType": "number"
+      }
+    ]
+  },
+  {
+    "id": "uni-3",
+    "order": 3,
+    "classId": "Unity",
+    "title": "Tính toán Sát thương Nhận vào",
+    "category": "Toán tử Game",
+    "theory": "<h3>Logic chiến đấu trong Game:</h3><p>Khi nhân vật bị quái vật tấn công, máu còn lại = máu ban đầu - sát thương:</p><pre><code>int maxHp = 100;\nint damage = 30;\nint currentHp = maxHp - damage; // 70</code></pre>",
+    "task": "Cho nhân vật có máu ban đầu <code>maxHp = 100</code> và nhận đòn đánh có sát thương <code>damage = 35</code>. Hãy tính lượng máu còn lại và lưu vào biến <code>remainingHp</code>.",
+    "initialCode": "int maxHp = 100;\nint damage = 35;\n\n// Tính máu còn lại:\nint remainingHp = \n\nDebug.Log(\"Máu còn lại: \" + remainingHp);",
+    "hint": "int remainingHp = maxHp - damage;",
+    "testCases": [
+      {
+        "id": "tc-uni-3",
+        "name": "remainingHp phải có giá trị bằng 65",
+        "type": "variable_value",
+        "varName": "remainingHp",
+        "expectedValue": 65
+      }
+    ]
+  },
+  {
+    "id": "uni-4",
+    "order": 4,
+    "classId": "Unity",
+    "title": "Kiểm tra Nhân vật Sống hay Game Over",
+    "category": "Logic Rẽ nhánh",
+    "theory": "<h3>Kiểm tra trạng thái Game:</h3><pre><code>if (hp <= 0) {\n    Debug.Log(\"Game Over!\");\n} else {\n    Debug.Log(\"Chiến đấu tiếp!\");\n}</code></pre>",
+    "task": "Cho biến <code>currentHp = 50</code>. Viết câu lệnh <code>if/else</code>: Nếu <code>currentHp > 0</code> gán <code>status = \"Alive\"</code>, ngược lại gán <code>status = \"Dead\"</code>.",
+    "initialCode": "int currentHp = 50;\nstring status = \"\";\n\n// Viết điều kiện if - else kiểm tra tại đây:\n\n",
+    "hint": "if (currentHp > 0) {\n    status = \"Alive\";\n} else {\n    status = \"Dead\";\n}",
+    "testCases": [
+      {
+        "id": "tc-uni-4",
+        "name": "Với currentHp 50, status phải bằng 'Alive'",
+        "type": "variable_value",
+        "varName": "status",
+        "expectedValue": "Alive"
+      }
+    ]
+  },
+  {
+    "id": "uni-5",
+    "order": 5,
+    "classId": "Unity",
+    "title": "Vòng lặp Sinh quái vật (Spawner)",
+    "category": "Vòng lặp Game",
+    "theory": "<h3>Spawn đối tượng lặp lại:</h3><pre><code>for (int i = 1; i <= 5; i++) {\n    Debug.Log(\"Spawn quái vật đợt: \" + i);\n}</code></pre>",
+    "task": "Sử dụng vòng lặp <code>for</code> từ 1 đến 5 để cộng dồn số lượng quái vật vào biến <code>totalMonsters</code> (bắt đầu từ 0). Kết quả bằng 15.",
+    "initialCode": "int totalMonsters = 0;\n\n// Dùng vòng lặp for từ 1 đến 5 để cộng dồn vào totalMonsters:\n\nDebug.Log(\"Tổng quái vật: \" + totalMonsters);",
+    "hint": "for (int i = 1; i <= 5; i++) {\n    totalMonsters += i;\n}",
+    "testCases": [
+      {
+        "id": "tc-uni-5",
+        "name": "totalMonsters phải bằng 15",
+        "type": "variable_value",
+        "varName": "totalMonsters",
+        "expectedValue": 15
+      }
+    ]
+  },
+  {
+    "id": "uni-6",
+    "order": 6,
+    "classId": "Unity",
+    "title": "Hàm Hồi Máu (Heal Function)",
+    "category": "Hàm C# Unity",
+    "theory": "<h3>Khai báo Hàm trong C#:</h3><p>Hàm trong C# cần khai báo kiểu dữ liệu trả về trước tên hàm:</p><pre><code>int Heal(int currentHp, int healAmount) {\n    return currentHp + healAmount;\n}</code></pre>",
+    "task": "Viết hàm <code>Heal(int currentHp, int healAmount)</code> nhận vào máu hiện tại và lượng máu hồi phục, trả về tổng lượng máu sau khi hồi.",
+    "initialCode": "// Định nghĩa hàm Heal:\nint Heal(int currentHp, int healAmount) {\n    \n}\n\n// Chạy thử:\nDebug.Log(Heal(50, 30));",
+    "hint": "int Heal(int currentHp, int healAmount) {\n    return currentHp + healAmount;\n}",
+    "testCases": [
+      {
+        "id": "tc-uni-6-1",
+        "name": "Heal(50, 30) trả về 80",
+        "type": "function_call",
+        "funcName": "Heal",
+        "args": [50, 30],
+        "expectedValue": 80
+      },
+      {
+        "id": "tc-uni-6-2",
+        "name": "Heal(20, 50) trả về 70",
+        "type": "function_call",
+        "funcName": "Heal",
+        "args": [20, 50],
+        "expectedValue": 70
+      }
+    ]
+  },
+  {
+    "id": "uni-7",
+    "order": 7,
+    "classId": "Unity",
+    "title": "Mảng Kho đồ Trang bị (Inventory Array)",
+    "category": "Mảng trong C#",
+    "theory": "<h3>Mảng trong C#:</h3><p>Khai báo mảng chuỗi với <code>string[]</code> và lấy số lượng bằng thuộc tính <code>.Length</code>:</p><pre><code>string[] weapons = { \"Kiếm gỗ\", \"Cung tên\", \"Búa sét\" };\nDebug.Log(weapons.Length); // 3</code></pre>",
+    "task": "Tạo mảng chuỗi <code>weapons</code> chứa ít nhất 3 tên vũ khí. Gán độ dài của mảng vào biến <code>weaponCount</code>.",
+    "initialCode": "// 1. Tạo mảng weapons:\nstring[] weapons = \n\n// 2. Lấy số lượng:\nint weaponCount = \n\nDebug.Log(\"Số vũ khí: \" + weaponCount);",
+    "hint": "string[] weapons = new string[] { \"Sword\", \"Bow\", \"Axe\" };\nint weaponCount = weapons.Length;",
+    "testCases": [
+      {
+        "id": "tc-uni-7-1",
+        "name": "weapons là mảng có ít nhất 3 vũ khí",
+        "type": "custom_eval",
+        "expression": "Array.isArray(weapons) && weapons.length >= 3"
+      },
+      {
+        "id": "tc-uni-7-2",
+        "name": "weaponCount bằng độ dài mảng weapons",
+        "type": "custom_eval",
+        "expression": "weaponCount === weapons.length"
+      }
+    ]
+  }
+]

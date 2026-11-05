@@ -1,0 +1,162 @@
+[
+  {
+    "id": "web-1",
+    "order": 1,
+    "classId": "Web",
+    "title": "Xuất câu chào đầu tiên",
+    "category": "Nhập môn Web",
+    "theory": "<h3>1. JavaScript trong Lập trình Web</h3><p>JavaScript là ngôn ngữ linh hồn giúp trang web tương tác với người dùng.</p><h3>2. Lệnh console.log()</h3><p>Dùng để in dữ liệu ra màn hình Console để kiểm tra:</p><pre><code>console.log(\"Xin chào các bạn!\");</code></pre>",
+    "task": "Sử dụng lệnh <code>console.log()</code> để in ra chính xác dòng chữ: <strong>Xin chào MindX Web</strong>",
+    "initialCode": "// Viết code JavaScript tại đây:\n\n",
+    "hint": "Gợi ý: console.log(\"Xin chào MindX Web\");",
+    "testCases": [
+      {
+        "id": "tc-web-1",
+        "name": "In ra đúng chuỗi 'Xin chào MindX Web'",
+        "type": "output_contains",
+        "expected": "Xin chào MindX Web"
+      }
+    ]
+  },
+  {
+    "id": "web-2",
+    "order": 2,
+    "classId": "Web",
+    "title": "Khai báo Biến let và const",
+    "category": "Biến & Kiểu dữ liệu",
+    "theory": "<h3>Cách khai báo biến trong JS:</h3><ul><li><code>let</code>: Biến có thể gán lại giá trị mới.</li><li><code>const</code>: Hằng số, giá trị cố định không đổi.</li></ul><pre><code>let ten = \"Nam\";\nlet tuoi = 13;</code></pre>",
+    "task": "Tạo biến <code>tenHocSinh</code> (chuỗi chữ) và biến <code>tuoi</code> (số nguyên). Sau đó in cả hai biến ra bằng <code>console.log(tenHocSinh, tuoi)</code>.",
+    "initialCode": "// 1. Tạo biến tenHocSinh:\n\n// 2. Tạo biến tuoi:\n\n// 3. In ra màn hình:\n",
+    "hint": "let tenHocSinh = \"Minh\"; let tuoi = 12; console.log(tenHocSinh, tuoi);",
+    "testCases": [
+      {
+        "id": "tc-web-2-1",
+        "name": "Khai báo biến tenHocSinh kiểu chuỗi",
+        "type": "variable_type",
+        "varName": "tenHocSinh",
+        "expectedType": "string"
+      },
+      {
+        "id": "tc-web-2-2",
+        "name": "Khai báo biến tuoi kiểu số",
+        "type": "variable_type",
+        "varName": "tuoi",
+        "expectedType": "number"
+      }
+    ]
+  },
+  {
+    "id": "web-3",
+    "order": 3,
+    "classId": "Web",
+    "title": "Tính toán Kích thước Banner",
+    "category": "Toán tử",
+    "theory": "<h3>Tính toán số học trong JavaScript:</h3><p>Cộng (<code>+</code>), Trừ (<code>-</code>), Nhân (<code>*</code>), Chia (<code>/</code>).</p><pre><code>let chieuDai = 1200;\nlet chieuRong = 400;\nlet dienTich = chieuDai * chieuRong;</code></pre>",
+    "task": "Cho một banner web có chiều rộng <code>chieuRong = 800</code> và chiều cao <code>chieuCao = 300</code>. Hãy tính diện tích và gán vào biến <code>dienTichBanner</code>.",
+    "initialCode": "let chieuRong = 800;\nlet chieuCao = 300;\n\n// Tính diện tích banner:\nlet dienTichBanner = \n\nconsole.log(\"Diện tích:\", dienTichBanner);",
+    "hint": "dienTichBanner = chieuRong * chieuCao;",
+    "testCases": [
+      {
+        "id": "tc-web-3",
+        "name": "dienTichBanner phải có giá trị bằng 240000",
+        "type": "variable_value",
+        "varName": "dienTichBanner",
+        "expectedValue": 240000
+      }
+    ]
+  },
+  {
+    "id": "web-4",
+    "order": 4,
+    "classId": "Web",
+    "title": "Kiểm tra Đăng nhập if - else",
+    "category": "Logic Web",
+    "theory": "<h3>Cấu trúc điều kiện if - else:</h3><pre><code>if (matKhau === \"123456\") {\n  console.log(\"Đăng nhập thành công\");\n} else {\n  console.log(\"Sai mật khẩu\");\n}</code></pre>",
+    "task": "Cho biến <code>diemThi = 8</code>. Nếu <code>diemThi >= 8</code> gán <code>ketQua = \"Dat\"</code>, ngược lại gán <code>ketQua = \"ChuaDat\"</code>.",
+    "initialCode": "let diemThi = 8;\nlet ketQua = \"\";\n\n// Viết câu lệnh if - else tại đây:\n\n",
+    "hint": "if (diemThi >= 8) { ketQua = \"Dat\"; } else { ketQua = \"ChuaDat\"; }",
+    "testCases": [
+      {
+        "id": "tc-web-4",
+        "name": "Với điểm 8, biến ketQua phải bằng 'Dat'",
+        "type": "variable_value",
+        "varName": "ketQua",
+        "expectedValue": "Dat"
+      }
+    ]
+  },
+  {
+    "id": "web-5",
+    "order": 5,
+    "classId": "Web",
+    "title": "Tạo danh sách thẻ HTML với vòng lặp",
+    "category": "Vòng lặp",
+    "theory": "<h3>Vòng lặp for:</h3><pre><code>for (let i = 1; i <= 5; i++) {\n  console.log(\"Thẻ số: \" + i);\n}</code></pre>",
+    "task": "Sử dụng vòng lặp <code>for</code> từ 1 đến 5 để cộng dồn vào biến <code>tongThe</code> (bắt đầu từ 0). Kết quả cuối cùng là 15.",
+    "initialCode": "let tongThe = 0;\n\n// Vòng lặp cộng dồn từ 1 đến 5:\n\nconsole.log(\"Tổng:\", tongThe);",
+    "hint": "for (let i = 1; i <= 5; i++) { tongThe += i; }",
+    "testCases": [
+      {
+        "id": "tc-web-5",
+        "name": "tongThe phải bằng 15",
+        "type": "variable_value",
+        "varName": "tongThe",
+        "expectedValue": 15
+      }
+    ]
+  },
+  {
+    "id": "web-6",
+    "order": 6,
+    "classId": "Web",
+    "title": "Viết hàm tính giá tiền (Function)",
+    "category": "Hàm",
+    "theory": "<h3>Hàm trong JavaScript:</h3><pre><code>function tinhGia(soLuong, gia) {\n  return soLuong * gia;\n}</code></pre>",
+    "task": "Viết hàm <code>tinhTongTien(soLuong, gia)</code> trả về tổng tiền sau khi nhân số lượng với giá.",
+    "initialCode": "// Định nghĩa hàm tinhTongTien:\nfunction tinhTongTien(soLuong, gia) {\n  \n}\n\n// Test:\nconsole.log(tinhTongTien(3, 50000));",
+    "hint": "function tinhTongTien(soLuong, gia) { return soLuong * gia; }",
+    "testCases": [
+      {
+        "id": "tc-web-6-1",
+        "name": "tinhTongTien(3, 50000) trả về 150000",
+        "type": "function_call",
+        "funcName": "tinhTongTien",
+        "args": [3, 50000],
+        "expectedValue": 150000
+      },
+      {
+        "id": "tc-web-6-2",
+        "name": "tinhTongTien(10, 2000) trả về 20000",
+        "type": "function_call",
+        "funcName": "tinhTongTien",
+        "args": [10, 2000],
+        "expectedValue": 20000
+      }
+    ]
+  },
+  {
+    "id": "web-7",
+    "order": 7,
+    "classId": "Web",
+    "title": "Mảng các thành phần giao diện (Array)",
+    "category": "Mảng",
+    "theory": "<h3>Mảng trong JS:</h3><pre><code>let menu = [\"Trang chủ\", \"Khóa học\", \"Liên hệ\"];\nconsole.log(menu.length); // 3</code></pre>",
+    "task": "Tạo mảng <code>menuItems</code> chứa ít nhất 3 tên nút bấm menu (chuỗi). Gán độ dài mảng vào biến <code>soLuongMenu</code>.",
+    "initialCode": "// 1. Tạo mảng menuItems:\nlet menuItems = \n\n// 2. Lấy số lượng:\nlet soLuongMenu = \n\nconsole.log(menuItems, soLuongMenu);",
+    "hint": "let menuItems = [\"Home\", \"About\", \"Contact\"]; let soLuongMenu = menuItems.length;",
+    "testCases": [
+      {
+        "id": "tc-web-7-1",
+        "name": "menuItems là mảng có ít nhất 3 phần tử",
+        "type": "custom_eval",
+        "expression": "Array.isArray(menuItems) && menuItems.length >= 3"
+      },
+      {
+        "id": "tc-web-7-2",
+        "name": "soLuongMenu bằng độ dài của menuItems",
+        "type": "custom_eval",
+        "expression": "soLuongMenu === menuItems.length"
+      }
+    ]
+  }
+]

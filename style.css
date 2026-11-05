@@ -1,0 +1,350 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary-color: #06b6d4;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --terminal-bg: #0f172a;
+  --terminal-text: #f1f5f9;
+  --accent-yellow: #f59e0b;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --radius-lg: 14px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  background: #e0e7ff;
+  border-radius: 12px;
+  padding: 4px 10px;
+}
+
+.logo-text h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.logo-text p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Layout */
+.main-layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 20px;
+  padding: 20px 28px;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-header h2 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lesson-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lesson-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lesson-item:hover {
+  border-color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+.lesson-item.active {
+  background: #eef2ff;
+  border-color: var(--primary-color);
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.lesson-icon {
+  font-size: 1.2rem;
+}
+
+.tip-card {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 0.88rem;
+  color: #92400e;
+}
+
+.tip-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* Content Area */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lesson-intro-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.lesson-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  background: #e0e7ff;
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.lesson-header h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.lesson-description {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.challenge-box {
+  background: #f0fdf4;
+  border-left: 4px solid var(--accent-green);
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  color: #166534;
+}
+
+/* Editor & Console Grid */
+.editor-console-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  min-height: 440px;
+}
+
+.editor-pane, .console-pane {
+  background: var(--terminal-bg);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid #334155;
+}
+
+.pane-header {
+  background: #1e293b;
+  color: #94a3b8;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-bottom: 1px solid #334155;
+}
+
+.pane-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+#codeEditor {
+  flex: 1;
+  background: transparent;
+  color: #f8fafc;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  padding: 16px;
+  border: none;
+  outline: none;
+  resize: none;
+  line-height: 1.6;
+}
+
+.console-screen {
+  flex: 1;
+  padding: 16px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.92rem;
+  color: var(--terminal-text);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 480px;
+}
+
+.log-line {
+  word-break: break-all;
+  white-space: pre-wrap;
+  padding: 2px 0;
+}
+
+.log-info {
+  color: #38bdf8;
+}
+
+.log-string {
+  color: #4ade80;
+}
+
+.log-number {
+  color: #facc15;
+}
+
+.log-boolean {
+  color: #c084fc;
+}
+
+.log-error {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 6px 10px;
+  border-radius: 6px;
+  border-left: 3px solid #ef4444;
+}
+
+.log-system {
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Buttons */
+.btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent-green);
+  color: #ffffff;
+  padding: 6px 14px;
+}
+
+.btn-primary:hover {
+  background: #059669;
+}
+
+.btn-secondary {
+  background: #e0e7ff;
+  color: var(--primary-color);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  background: #c7d2fe;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #94a3b8;
+  padding: 4px 8px;
+}
+
+.btn-ghost:hover {
+  color: #ffffff;
+  background: #334155;
+}
+
+.btn-sm {
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .editor-console-grid {
+    grid-template-columns: 1fr;
+  }
+}

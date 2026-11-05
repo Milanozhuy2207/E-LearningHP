@@ -1,0 +1,155 @@
+[
+  {
+    "id": "lesson-1",
+    "order": 1,
+    "title": "Xin chào JavaScript",
+    "category": "Nhập môn",
+    "theory": "<h3>1. JavaScript là gì?</h3><p>JavaScript là ngôn ngữ lập trình giúp trang web trở nên sống động, có thể tương tác với người dùng.</p><h3>2. Lệnh in dữ liệu: <code>console.log()</code></h3><p>Dùng để xuất thông báo hoặc kết quả tính toán ra màn hình kiểm tra:</p><pre><code>console.log(\"Xin chào các bạn!\");</code></pre>",
+    "task": "Sử dụng lệnh <code>console.log()</code> để in ra chính xác dòng chữ: <strong>Xin chào MindX</strong>",
+    "initialCode": "// Viết câu lệnh của bạn bên dưới:\n\n",
+    "hint": "Gợi ý: console.log(\"Xin chào MindX\");",
+    "testCases": [
+      {
+        "id": "tc-1-1",
+        "name": "In ra đúng chuỗi 'Xin chào MindX'",
+        "type": "output_contains",
+        "expected": "Xin chào MindX"
+      }
+    ]
+  },
+  {
+    "id": "lesson-2",
+    "order": 2,
+    "title": "Khai báo Biến với let và const",
+    "category": "Biến & Kiểu dữ liệu",
+    "theory": "<h3>1. Biến là gì?</h3><p>Biến (variable) giống như một chiếc hộp dùng để lưu trữ dữ liệu (tên, tuổi, điểm số,...).</p><h3>2. Cách tạo biến:</h3><ul><li><code>let</code>: Dùng khi giá trị của biến có thể thay đổi trong tương lai.</li><li><code>const</code>: Dùng cho hằng số (giá trị không đổi).</li></ul><pre><code>let ten = \"Nam\";\nconst namSinh = 2012;</code></pre>",
+    "task": "Tạo một biến có tên là <code>tenHocSinh</code> gán bằng tên của bạn (dạng chuỗi chữ), và một biến <code>tuoi</code> gán bằng số tuổi của bạn. Sau đó dùng <code>console.log(tenHocSinh, tuoi)</code> để in ra.",
+    "initialCode": "// 1. Tạo biến tenHocSinh:\n\n// 2. Tạo biến tuoi:\n\n// 3. In ra màn hình:\n",
+    "hint": "Ví dụ: let tenHocSinh = \"Minh\"; let tuoi = 12; console.log(tenHocSinh, tuoi);",
+    "testCases": [
+      {
+        "id": "tc-2-1",
+        "name": "Có khai báo biến tenHocSinh là chuỗi",
+        "type": "variable_type",
+        "varName": "tenHocSinh",
+        "expectedType": "string"
+      },
+      {
+        "id": "tc-2-2",
+        "name": "Có khai báo biến tuoi là số",
+        "type": "variable_type",
+        "varName": "tuoi",
+        "expectedType": "number"
+      }
+    ]
+  },
+  {
+    "id": "lesson-3",
+    "order": 3,
+    "title": "Phép toán Tính Diện Tích",
+    "category": "Toán tử",
+    "theory": "<h3>Các phép toán trong JavaScript:</h3><ul><li>Cộng: <code>+</code></li><li>Trừ: <code>-</code></li><li>Nhân: <code>*</code></li><li>Chia: <code>/</code></li></ul><pre><code>let chieuDai = 10;\nlet chieuRong = 5;\nlet dienTich = chieuDai * chieuRong;</code></pre>",
+    "task": "Cho hình chữ nhật có chiều dài <code>dai = 8</code> và chiều rộng <code>rong = 5</code>. Hãy tính diện tích và lưu vào biến <code>dienTich</code>, sau đó in biến <code>dienTich</code> ra console.",
+    "initialCode": "let dai = 8;\nlet rong = 5;\n\n// Tính diện tích và gán vào biến dienTich:\nlet dienTich = \n\nconsole.log(dienTich);",
+    "hint": "dienTich = dai * rong;",
+    "testCases": [
+      {
+        "id": "tc-3-1",
+        "name": "Biến dienTich có giá trị đúng bằng 40",
+        "type": "variable_value",
+        "varName": "dienTich",
+        "expectedValue": 40
+      }
+    ]
+  },
+  {
+    "id": "lesson-4",
+    "order": 4,
+    "title": "Câu lệnh điều kiện if - else",
+    "category": "Logic & Rẽ nhánh",
+    "theory": "<h3>Cú pháp if - else:</h3><pre><code>if (điều_kiện) {\n  // Chạy khi điều kiện ĐÚNG (true)\n} else {\n  // Chạy khi điều kiện SAI (false)\n}</code></pre><p>Ví dụ: <code>if (diem >= 5) { console.log(\"Đạt\"); } else { console.log(\"Chưa đạt\"); }</code></p>",
+    "task": "Tạo biến <code>diemThi = 8</code>. Viết câu lệnh <code>if/else</code>: Nếu <code>diemThi >= 8</code> thì tạo biến <code>xepLoai = \"Gioi\"</code>, ngược lại <code>xepLoai = \"Kha\"</code>.",
+    "initialCode": "let diemThi = 8;\nlet xepLoai = \"\";\n\n// Viết câu lệnh if - else tại đây:\n\n",
+    "hint": "if (diemThi >= 8) { xepLoai = \"Gioi\"; } else { xepLoai = \"Kha\"; }",
+    "testCases": [
+      {
+        "id": "tc-4-1",
+        "name": "Với điểm 8, biến xepLoai phải bằng 'Gioi'",
+        "type": "variable_value",
+        "varName": "xepLoai",
+        "expectedValue": "Gioi"
+      }
+    ]
+  },
+  {
+    "id": "lesson-5",
+    "order": 5,
+    "title": "Vòng lặp for tính tổng",
+    "category": "Vòng lặp",
+    "theory": "<h3>Vòng lặp for:</h3><p>Dùng để lặp đi lặp lại một khối lệnh một số lần xác định:</p><pre><code>for (let i = 1; i <= 5; i++) {\n  console.log(i);\n}</code></pre>",
+    "task": "Sử dụng vòng lặp <code>for</code> để tính tổng các số từ 1 đến 5 và gán kết quả vào biến <code>tong</code> (biết 1 + 2 + 3 + 4 + 5 = 15).",
+    "initialCode": "let tong = 0;\n\n// Dùng vòng lặp for từ 1 đến 5 để cộng dồn vào biến tong:\n\nconsole.log(\"Tổng là:\", tong);",
+    "hint": "for (let i = 1; i <= 5; i++) { tong = tong + i; }",
+    "testCases": [
+      {
+        "id": "tc-5-1",
+        "name": "Biến tong có giá trị bằng 15",
+        "type": "variable_value",
+        "varName": "tong",
+        "expectedValue": 15
+      }
+    ]
+  },
+  {
+    "id": "lesson-6",
+    "order": 6,
+    "title": "Hàm tính toán (Function)",
+    "category": "Hàm",
+    "theory": "<h3>Khái niệm Hàm:</h3><p>Hàm nhận tham số đầu vào và trả về giá trị thông qua từ khóa <code>return</code>:</p><pre><code>function gapDoi(x) {\n  return x * 2;\n}</code></pre>",
+    "task": "Viết một hàm có tên là <code>tinhTong(a, b)</code> nhận vào 2 số và trả về tổng của chúng.",
+    "initialCode": "// Định nghĩa hàm tinhTong tại đây:\nfunction tinhTong(a, b) {\n  \n}\n\n// Chạy thử:\nconsole.log(tinhTong(10, 20));",
+    "hint": "function tinhTong(a, b) { return a + b; }",
+    "testCases": [
+      {
+        "id": "tc-6-1",
+        "name": "Hàm tinhTong(3, 4) trả về 7",
+        "type": "function_call",
+        "funcName": "tinhTong",
+        "args": [3, 4],
+        "expectedValue": 7
+      },
+      {
+        "id": "tc-6-2",
+        "name": "Hàm tinhTong(100, 250) trả về 350",
+        "type": "function_call",
+        "funcName": "tinhTong",
+        "args": [100, 250],
+        "expectedValue": 350
+      }
+    ]
+  },
+  {
+    "id": "lesson-7",
+    "order": 7,
+    "title": "Mảng danh sách (Array)",
+    "category": "Mảng",
+    "theory": "<h3>Mảng trong JavaScript:</h3><p>Mảng dùng để chứa nhiều phần tử, vị trí đầu tiên luôn là số 0:</p><pre><code>let traiCay = [\"Cam\", \"Táo\", \"Xoài\"];\nconsole.log(traiCay[0]); // In ra \"Cam\"\nconsole.log(traiCay.length); // Số lượng: 3</code></pre>",
+    "task": "Tạo một mảng có tên <code>danhSachBan</code> chứa ít nhất 3 tên bạn bè. Sau đó tạo biến <code>soLuongBan</code> lưu độ dài (length) của mảng đó.",
+    "initialCode": "// 1. Tạo mảng danhSachBan:\nlet danhSachBan = \n\n// 2. Lấy số lượng phần tử:\nlet soLuongBan = \n\nconsole.log(danhSachBan, soLuongBan);",
+    "hint": "let danhSachBan = [\"An\", \"Binh\", \"Chau\"]; let soLuongBan = danhSachBan.length;",
+    "testCases": [
+      {
+        "id": "tc-7-1",
+        "name": "danhSachBan là mảng có từ 3 phần tử trở lên",
+        "type": "custom_eval",
+        "expression": "Array.isArray(danhSachBan) && danhSachBan.length >= 3"
+      },
+      {
+        "id": "tc-7-2",
+        "name": "soLuongBan bằng độ dài của danhSachBan",
+        "type": "custom_eval",
+        "expression": "soLuongBan === danhSachBan.length"
+      }
+    ]
+  }
+]

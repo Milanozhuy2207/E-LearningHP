@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 1: Làm Quen Với JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0fdf4;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #10b981;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background: #059669;
+    }
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      color: #6b7280;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>👋 Xin chào JavaScript!</h1>
+    <p>Trang web này đã được kết nối với file <code>script.js</code>.</p>
+    <p>Hãy nhấn phím <strong>F12</strong> trên bàn phím, chọn tab <strong>Console</strong> để xem điều kỳ diệu!</p>
+    <button onclick="chaoHocSinh()">Bấm vào đây để chào</button>
+    <a href="../../index.html" class="back-link">&larr; Quay lại trang chủ bài học</a>
+  </div>
+
+  <!-- Nhúng file JavaScript vào trang web -->
+  <script src="script.js"></script>
+</body>
+</html>

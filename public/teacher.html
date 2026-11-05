@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Điều Khiển Giáo Viên - MindX Technology School</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/teacher.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="js/icons.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="teacher-header">
+    <div class="teacher-logo">
+      <div class="teacher-logo-badge">MINDX TEACHER</div>
+      <div class="teacher-logo-title">
+        <h1>Bảng Giám Sát Tiến Độ & Quản Lý Lớp Học</h1>
+        <p>Hệ thống theo dõi thời gian thực dành cho Giáo viên MindX</p>
+      </div>
+    </div>
+    <div class="teacher-actions">
+      <button class="btn-teacher btn-teacher-primary" id="btnOpenAddStudent" style="display: inline-flex; align-items: center; gap: 6px;">
+        <span id="addStudentBtnIcon"></span>
+        <span>Thêm Học Sinh</span>
+      </button>
+      <button class="btn-teacher btn-teacher-secondary" id="btnRefresh" style="display: inline-flex; align-items: center; gap: 6px;">
+        <span id="refreshBtnIcon"></span>
+        <span>Làm mới</span>
+      </button>
+      <a href="index.html" class="btn-teacher btn-teacher-secondary" style="display: inline-flex; align-items: center; gap: 6px;">
+        <span id="homeBtnIcon"></span>
+        <span>Trang Học Sinh</span>
+      </a>
+      <button class="btn-teacher btn-teacher-danger" id="btnResetClass" style="display: inline-flex; align-items: center; gap: 6px;">
+        <span id="resetClassBtnIcon"></span>
+        <span>Đặt lại lớp</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <!-- Thống kê chung -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon" id="statIconUsers" style="color: #38bdf8;"></div>
+        <div class="stat-info">
+          <span class="stat-label">Tổng số học sinh</span>
+          <span class="stat-value" id="statTotalStudents">0</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" id="statIconProgress" style="color: #34d399;"></div>
+        <div class="stat-info">
+          <span class="stat-label">Tiến độ lớp trung bình</span>
+          <span class="stat-value" id="statAvgProgress">0%</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" id="statIconTrophy" style="color: #fbbf24;"></div>
+        <div class="stat-info">
+          <span class="stat-label">Hoàn thành 100%</span>
+          <span class="stat-value" id="statCompletedStudents">0</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" id="statIconLessons" style="color: #c084fc;"></div>
+        <div class="stat-info">
+          <span class="stat-label">Tổng bài tập</span>
+          <span class="stat-value" id="statTotalLessons">7</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bộ lọc theo lớp học & Bảng danh sách -->
+    <section class="table-card">
+      <div class="table-header">
+        <div class="table-title">
+          <h2>Danh Sách Học Sinh</h2>
+          <p id="tableSubTitle">Hiển thị học sinh tất cả các lớp &bull; Tự động cập nhật mỗi 5 giây</p>
+        </div>
+        <div class="live-badge">
+          <span class="live-dot"></span>
+          <span>TRỰC TIẾP (LIVE)</span>
+        </div>
+      </div>
+
+      <!-- Tabs Lọc 4 Lớp -->
+      <div style="padding: 16px 24px; border-bottom: 1px solid var(--border-dark); background: rgba(15, 23, 42, 0.4);">
+        <div class="filter-tabs-wrapper">
+          <div class="class-filter-tabs" style="flex-wrap: wrap;">
+            <button class="filter-tab-btn active" data-class="All" id="tabFilterAll" style="display: inline-flex; align-items: center; gap: 8px;">
+              <span id="tabIconAll"></span>
+              <span>Tất cả</span>
+              <span id="badgeCountAll" style="opacity: 0.7;">(0)</span>
+            </button>
+            <button class="filter-tab-btn web" data-class="Web" id="tabFilterWeb" style="display: inline-flex; align-items: center; gap: 8px;">
+              <span id="tabIconWeb"></span>
+              <span>Lớp Web</span>
+              <span id="badgeCountWeb" style="opacity: 0.7;">(0)</span>
+            </button>
+            <button class="filter-tab-btn python" data-class="Python" id="tabFilterPython" style="display: inline-flex; align-items: center; gap: 8px;">
+              <span id="tabIconPython"></span>
+              <span>Lớp Python</span>
+              <span id="badgeCountPython" style="opacity: 0.7;">(0)</span>
+            </button>
+            <button class="filter-tab-btn unity" data-class="Unity" id="tabFilterUnity" style="display: inline-flex; align-items: center; gap: 8px;">
+              <span id="tabIconUnity"></span>
+              <span>Lớp Unity</span>
+              <span id="badgeCountUnity" style="opacity: 0.7;">(0)</span>
+            </button>
+            <button class="filter-tab-btn robotics" data-class="Robotics" id="tabFilterRobotics" style="display: inline-flex; align-items: center; gap: 8px;">
+              <span id="tabIconRobotics"></span>
+              <span>Lớp Robot (VEX)</span>
+              <span id="badgeCountRobotics" style="opacity: 0.7;">(0)</span>
+            </button>
+          </div>
+
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            Lọc theo: <strong id="currentFilterLabel" style="color: #ffffff;">Tất cả các lớp</strong>
+          </div>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="students-table">
+          <thead>
+            <tr>
+              <th>Học Sinh & Lớp</th>
+              <th>Tiến Độ (%)</th>
+              <th>Chi Tiết 7 Bài Học</th>
+              <th>Lần Nộp Gần Nhất</th>
+              <th>Hành Động</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTableBody">
+            <!-- Render danh sách học sinh -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal Thêm Học Sinh Mới -->
+  <div class="modal-overlay-custom" id="addStudentModal">
+    <div class="modal-card-custom">
+      <div class="modal-card-header">
+        <h3>➕ Thêm Học Sinh Vào Lớp</h3>
+        <button class="btn-close-drawer" id="btnCloseAddStudent" style="color: #ffffff;">&times;</button>
+      </div>
+      <div class="modal-card-body">
+        <div class="form-group-custom">
+          <label>Họ và Tên học sinh:</label>
+          <input type="text" id="addStudentName" placeholder="Ví dụ: Nguyễn Văn An..." autocomplete="off">
+        </div>
+        <div class="form-group-custom">
+          <label>Chọn Lớp Học:</label>
+          <select id="addStudentClass">
+            <option value="Web">🌐 Lớp Lập Trình Web (JavaScript)</option>
+            <option value="Python">🐍 Lớp Lập Trình Python</option>
+            <option value="Unity">🎮 Lớp Phát Triển Game Unity</option>
+            <option value="Robotics">🤖 Lớp Lập Trình Robot (VEX GO & VEX IQ)</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-card-footer">
+        <button class="btn-teacher btn-teacher-secondary" id="btnCancelAddStudent">Hủy bỏ</button>
+        <button class="btn-teacher btn-teacher-primary" id="btnConfirmAddStudent">Lưu Học Sinh</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Xem Code Của Học Sinh -->
+  <div class="modal-overlay-custom" id="codeModal">
+    <div class="modal-card-custom" style="max-width: 800px;">
+      <div class="modal-card-header">
+        <h3 id="modalStudentTitle">Bài làm của học sinh</h3>
+        <button class="btn-close-drawer" id="btnCloseCodeModal" style="color: #ffffff;">&times;</button>
+      </div>
+      <div class="modal-card-body">
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+          <label style="color: var(--text-muted); font-weight: 800; font-size: 0.88rem;">Chọn bài học:</label>
+          <select id="modalLessonSelect" style="flex: 1; min-width: 260px; background: var(--bg-dark); border: 1px solid var(--border-dark); color: #ffffff; padding: 8px 12px; border-radius: 6px;">
+            <!-- Render danh sách bài học -->
+          </select>
+          <div id="modalLessonStatus" style="font-weight: 900; font-size: 0.88rem;"></div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-muted);">
+          <span id="modalAttemptsInfo">Số lần thử: 0</span>
+          <span id="modalSubmittedTime">Thời gian nộp: Chưa có</span>
+        </div>
+
+        <pre class="code-preview-box" id="codePreviewBox">// Chưa có mã nguồn</pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/teacher.js"></script>
+</body>
+</html>

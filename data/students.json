@@ -1,0 +1,278 @@
+[
+  {
+    "id": "std-web-1",
+    "name": "Nguyễn Hoàng Nam",
+    "classId": "Web",
+    "avatar": "⚡",
+    "createdAt": "2026-10-11T08:00:00.000Z",
+    "lastActive": "2026-10-11T14:20:00.000Z",
+    "progress": {
+      "web-1": {
+        "status": "passed",
+        "code": "console.log(\"Xin chào MindX Web\");",
+        "passedAt": "2026-10-11T08:15:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:15:00.000Z",
+        "attempts": 1
+      },
+      "web-2": {
+        "status": "passed",
+        "code": "let tenHocSinh = \"Hoàng Nam\";\nlet tuoi = 13;\nconsole.log(tenHocSinh, tuoi);",
+        "passedAt": "2026-10-11T08:30:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:30:00.000Z",
+        "attempts": 2
+      },
+      "web-3": {
+        "status": "passed",
+        "code": "let chieuRong = 800;\nlet chieuCao = 300;\nlet dienTichBanner = chieuRong * chieuCao;\nconsole.log(\"Diện tích:\", dienTichBanner);",
+        "passedAt": "2026-10-11T08:50:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:50:00.000Z",
+        "attempts": 1
+      }
+    }
+  },
+  {
+    "id": "std-web-2",
+    "name": "Trần Thị Mai Anh",
+    "classId": "Web",
+    "avatar": "🚀",
+    "createdAt": "2026-10-11T08:05:00.000Z",
+    "lastActive": "2026-11-05T13:56:56.721Z",
+    "progress": {
+      "web-1": {
+        "status": "passed",
+        "code": "console.log(\"Xin chào MindX Web\");",
+        "passedAt": "2026-10-11T08:20:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:20:00.000Z",
+        "attempts": 1
+      },
+      "web-2": {
+        "status": "in_progress",
+        "code": "let tenHocSinh = \"Mai Anh\";\n// Đang hoàn thiện phần tuổi",
+        "passedAt": null,
+        "lastSubmittedAt": "2026-10-11T13:45:00.000Z",
+        "attempts": 2
+      }
+    }
+  },
+  {
+    "id": "std-web-3",
+    "name": "Lê Quốc Huy",
+    "classId": "Web",
+    "avatar": "🧑‍💻",
+    "createdAt": "2026-10-11T08:10:00.000Z",
+    "lastActive": "2026-10-11T12:30:00.000Z",
+    "progress": {
+      "web-1": {
+        "status": "passed",
+        "code": "console.log(\"Xin chào MindX Web\");",
+        "passedAt": "2026-10-11T08:35:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:35:00.000Z",
+        "attempts": 1
+      }
+    }
+  },
+  {
+    "id": "std-web-4",
+    "name": "Vũ Thùy Trang",
+    "classId": "Web",
+    "avatar": "🌟",
+    "createdAt": "2026-10-11T08:15:00.000Z",
+    "lastActive": "2026-10-11T09:00:00.000Z",
+    "progress": {}
+  },
+  {
+    "id": "std-py-1",
+    "name": "Đặng Minh Khang",
+    "classId": "Python",
+    "avatar": "🐍",
+    "createdAt": "2026-10-11T08:00:00.000Z",
+    "lastActive": "2026-10-11T08:38:32.979Z",
+    "progress": {
+      "py-1": {
+        "status": "passed",
+        "code": "print(\"Xin chào MindX Python\")",
+        "passedAt": "2026-10-11T08:25:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:25:00.000Z",
+        "attempts": 1
+      },
+      "py-2": {
+        "status": "passed",
+        "code": "ten_hoc_sinh = \"Minh Khang\"\ntuoi = 12\nprint(ten_hoc_sinh, tuoi)",
+        "passedAt": "2026-10-11T08:40:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:40:00.000Z",
+        "attempts": 1
+      }
+    }
+  },
+  {
+    "id": "std-py-2",
+    "name": "Bùi Gia Bảo",
+    "classId": "Python",
+    "avatar": "🤖",
+    "createdAt": "2026-10-11T08:05:00.000Z",
+    "lastActive": "2026-10-11T11:20:00.000Z",
+    "progress": {
+      "py-1": {
+        "status": "passed",
+        "code": "print(\"Xin chào MindX Python\")",
+        "passedAt": "2026-10-11T08:30:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:30:00.000Z",
+        "attempts": 1
+      }
+    }
+  },
+  {
+    "id": "std-py-3",
+    "name": "Hoàng Thảo My",
+    "classId": "Python",
+    "avatar": "🌸",
+    "createdAt": "2026-10-11T08:10:00.000Z",
+    "lastActive": "2026-10-11T10:15:00.000Z",
+    "progress": {}
+  },
+  {
+    "id": "std-uni-1",
+    "name": "Phan Anh Quân",
+    "classId": "Unity",
+    "avatar": "🎮",
+    "createdAt": "2026-10-11T08:00:00.000Z",
+    "lastActive": "2026-10-11T08:38:17.659Z",
+    "progress": {
+      "uni-1": {
+        "status": "passed",
+        "code": "Debug.Log(\"Xin chào MindX Unity\");",
+        "passedAt": "2026-10-11T08:20:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:20:00.000Z",
+        "attempts": 1
+      },
+      "uni-2": {
+        "status": "passed",
+        "code": "string playerName = \"Anh Quân\";\nint hp = 100;\nDebug.Log(playerName + \" HP: \" + hp);",
+        "passedAt": "2026-10-11T08:35:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:35:00.000Z",
+        "attempts": 1
+      },
+      "uni-3": {
+        "status": "passed",
+        "code": "int maxHp = 100;\nint damage = 35;\nint remainingHp = maxHp - damage;\nDebug.Log(\"Máu còn lại: \" + remainingHp);",
+        "passedAt": "2026-10-11T08:55:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:55:00.000Z",
+        "attempts": 1
+      },
+      "uni-4": {
+        "status": "passed",
+        "code": "int currentHp = 50;\nstring status = \"\";\nif (currentHp > 0) { status = \"Alive\"; } else { status = \"Dead\"; }",
+        "passedAt": "2026-10-11T09:15:00.000Z",
+        "lastSubmittedAt": "2026-10-11T09:15:00.000Z",
+        "attempts": 1
+      }
+    }
+  },
+  {
+    "id": "std-uni-2",
+    "name": "Tạ Quang Dũng",
+    "classId": "Unity",
+    "avatar": "👾",
+    "createdAt": "2026-10-11T08:05:00.000Z",
+    "lastActive": "2026-10-11T14:30:00.000Z",
+    "progress": {
+      "uni-1": {
+        "status": "passed",
+        "code": "Debug.Log(\"Xin chào MindX Unity\");",
+        "passedAt": "2026-10-11T08:25:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:25:00.000Z",
+        "attempts": 1
+      }
+    }
+  },
+  {
+    "id": "std-uni-3",
+    "name": "Trương Mỹ Linh",
+    "classId": "Unity",
+    "avatar": "✨",
+    "createdAt": "2026-10-11T08:10:00.000Z",
+    "lastActive": "2026-11-05T13:57:18.424Z",
+    "progress": {
+      "uni-1": {
+        "status": "passed",
+        "code": "// Viết code C# Unity tại đây:\nDebug.Log(\"Xin chào MindX Unity\");\n",
+        "attempts": 1,
+        "passedAt": "2026-10-11T08:58:03.453Z",
+        "lastSubmittedAt": "2026-10-11T08:58:03.453Z"
+      }
+    }
+  },
+  {
+    "id": "std-rob-1",
+    "name": "Phạm Gia Hưng",
+    "classId": "Robotics",
+    "avatar": "🤖",
+    "createdAt": "2026-10-11T08:00:00.000Z",
+    "lastActive": "2026-11-05T14:16:50.585Z",
+    "progress": {
+      "rob-1": {
+        "status": "passed",
+        "code": "=== BÀI LÀM TỪ VỰNG & KHỐI LỆNH VEX GO CỦA HỌC SINH (Buổi 1 Phần 1) ===\n✅ 1. khi -> Chọn: [when]\n✅ 2. bắt đầu -> Chọn: [start]\n✅ 3. động cơ -> Chọn: [motor]\n✅ 4. quay, quay tròn -> Chọn: [spin]\n✅ 5. phía trước -> Chọn: [forward]\n✅ 6. đảo ngược -> Chọn: [reverse]\n✅ 7. dừng lại -> Chọn: [stop]\n✅ Khối lệnh VEXcode đã lắp: [spin] -> [motor] -> [forward]\n// KID_STATE:{\"quiz\":{\"q1\":\"when\",\"q2\":\"start\",\"q3\":\"motor\",\"q4\":\"spin\",\"q5\":\"forward\",\"q6\":\"reverse\",\"q7\":\"stop\"},\"slots\":[\"spin\",\"motor\",\"forward\"]}",
+        "passedAt": "2026-10-11T08:20:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:20:00.000Z",
+        "attempts": 1
+      },
+      "rob-2": {
+        "status": "passed",
+        "code": "=== BÀI LÀM TỪ VỰNG & KHỐI LỆNH VEX GO CỦA HỌC SINH (Buổi 1 Phần 2) ===\n✅ 1. để, đặt -> Chọn: [set]\n✅ 2. vận tốc, tốc độ -> Chọn: [velocity]\n✅ 3. đến, để -> Chọn: [to]\n✅ 4. cho, khoảng -> Chọn: [for]\n✅ 5. độ -> Chọn: [degrees]\n✅ 6. đợi, chờ đợi -> Chọn: [wait]\n✅ 7. giây -> Chọn: [seconds]\n✅ Khối lệnh VEXcode đã lắp: [set] -> [velocity] -> [to]\n// KID_STATE:{\"quiz\":{\"q1\":\"set\",\"q2\":\"velocity\",\"q3\":\"to\",\"q4\":\"for\",\"q5\":\"degrees\",\"q6\":\"wait\",\"q7\":\"seconds\"},\"slots\":[\"set\",\"velocity\",\"to\"]}",
+        "passedAt": "2026-10-11T08:40:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:40:00.000Z",
+        "attempts": 1
+      },
+      "rob-3": {
+        "status": "passed",
+        "code": "=== BÀI LÀM TỪ VỰNG & KHỐI LỆNH VEX GO CỦA HỌC SINH (Buổi 2 Phần 1) ===\n✅ 1. xoay -> Chọn: [turn]\n✅ 2. bên trái -> Chọn: [left]\n✅ 3. bên phải -> Chọn: [right]\n✅ 4. xoay vòng -> Chọn: [Rotation]\n✅ 5. dừng lại -> Chọn: [Stop driving]\n✅ Khối lệnh VEXcode đã lắp: [turn] -> [right] -> [for] -> [90 degrees]\n// KID_STATE:{\"quiz\":{\"q1\":\"turn\",\"q2\":\"left\",\"q3\":\"right\",\"q4\":\"Rotation\",\"q5\":\"Stop driving\"},\"slots\":[\"turn\",\"right\",\"for\",\"90 degrees\"]}",
+        "passedAt": "2026-10-11T09:05:00.000Z",
+        "lastSubmittedAt": "2026-10-11T09:05:00.000Z",
+        "attempts": 1
+      },
+      "rob-4": {
+        "status": "passed",
+        "code": "=== BÀI LÀM TỪ VỰNG & KHỐI LỆNH VEX GO CỦA HỌC SINH (Từ Vựng Buổi 2 (Phần 2): Cảm Biến Va Chạm LED Bumper) ===\n✅ 1. Cụm từ nào có nghĩa là \"đợi cho đến khi\"? -> Chọn: [wait until]\n✅ 2. Từ nào có nghĩa là \"cảm biến bumber\" (nút cảm biến có đèn LED)? -> Chọn: [LEDbumber]\n✅ 3. Từ nào có nghĩa là \"được nhấn\"? -> Chọn: [pressed]\n✅ 4. Khi ghép \"LEDbumber pressed\", câu này có nghĩa tiếng Việt là gì? -> Chọn: [cảm biến bumber được nhấn]\n✅ Khối lệnh VEXcode đã lắp: [wait until] -> [LEDbumber] -> [pressed]\n// KID_STATE:{\"quiz\":{\"q1\":\"wait until\",\"q2\":\"LEDbumber\",\"q3\":\"pressed\",\"q4\":\"cảm biến bumber được nhấn\"},\"slots\":[\"wait until\",\"LEDbumber\",\"pressed\"]}",
+        "attempts": 1,
+        "passedAt": "2026-11-05T14:16:50.585Z",
+        "lastSubmittedAt": "2026-11-05T14:16:50.585Z"
+      }
+    }
+  },
+  {
+    "id": "std-rob-2",
+    "name": "Lê Bảo Ngọc",
+    "classId": "Robotics",
+    "avatar": "🎯",
+    "createdAt": "2026-10-11T08:05:00.000Z",
+    "lastActive": "2026-10-11T13:20:00.000Z",
+    "progress": {
+      "rob-1": {
+        "status": "passed",
+        "code": "=== BÀI LÀM TỪ VỰNG & KHỐI LỆNH VEX GO CỦA HỌC SINH (Buổi 1 Phần 1) ===\n✅ 1. khi -> Chọn: [when]\n✅ 2. bắt đầu -> Chọn: [start]\n✅ 3. động cơ -> Chọn: [motor]\n✅ 4. quay, quay tròn -> Chọn: [spin]\n✅ 5. phía trước -> Chọn: [forward]\n✅ 6. đảo ngược -> Chọn: [reverse]\n✅ 7. dừng lại -> Chọn: [stop]\n✅ Khối lệnh VEXcode đã lắp: [spin] -> [motor] -> [forward]\n// KID_STATE:{\"quiz\":{\"q1\":\"when\",\"q2\":\"start\",\"q3\":\"motor\",\"q4\":\"spin\",\"q5\":\"forward\",\"q6\":\"reverse\",\"q7\":\"stop\"},\"slots\":[\"spin\",\"motor\",\"forward\"]}",
+        "passedAt": "2026-10-11T08:25:00.000Z",
+        "lastSubmittedAt": "2026-10-11T08:25:00.000Z",
+        "attempts": 1
+      }
+    }
+  },
+  {
+    "id": "std-rob-3",
+    "name": "Ngô Đức Minh",
+    "classId": "Robotics",
+    "avatar": "🔥",
+    "createdAt": "2026-10-11T08:12:00.000Z",
+    "lastActive": "2026-10-11T11:45:00.000Z",
+    "progress": {}
+  },
+  {
+    "id": "std-robotics-1793886616178",
+    "name": "huyy",
+    "classId": "Robotics",
+    "avatar": "🎯",
+    "createdAt": "2026-11-05T13:50:16.180Z",
+    "lastActive": "2026-11-05T13:50:16.180Z",
+    "progress": {}
+  }
+]
