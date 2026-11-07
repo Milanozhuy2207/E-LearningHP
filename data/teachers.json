@@ -1,0 +1,71 @@
+[
+  {
+    "id": "tch-super-admin",
+    "username": "admin",
+    "password": "123",
+    "name": "Quản Trị Đào Tạo MindX",
+    "role": "super_admin",
+    "assignedClasses": [
+      "Robotics",
+      "Python",
+      "Web",
+      "Unity"
+    ],
+    "createdAt": "2026-11-01T08:00:00.000Z"
+  },
+  {
+    "id": "tch-robotics-01",
+    "username": "gv_minh",
+    "password": "123",
+    "name": "Thầy Minh (Lớp VEX GO - Ca Sáng)",
+    "role": "teacher",
+    "assignedClasses": [
+      "Robotics"
+    ],
+    "createdAt": "2026-11-01T08:00:00.000Z"
+  },
+  {
+    "id": "tch-robotics-02",
+    "username": "gv_lan",
+    "password": "123",
+    "name": "Cô Lan (Lớp VEX GO - Ca Chiều)",
+    "role": "teacher",
+    "assignedClasses": [
+      "Robotics"
+    ],
+    "createdAt": "2026-11-01T08:10:00.000Z"
+  },
+  {
+    "id": "tch-python-01",
+    "username": "gv_python",
+    "password": "123",
+    "name": "Thầy Hoàng (Lớp Python)",
+    "role": "teacher",
+    "assignedClasses": [
+      "Python"
+    ],
+    "createdAt": "2026-11-01T08:20:00.000Z"
+  },
+  {
+    "id": "tch-web-01",
+    "username": "gv_web",
+    "password": "123",
+    "name": "Cô Thảo (Lớp Web JS)",
+    "role": "teacher",
+    "assignedClasses": [
+      "Web"
+    ],
+    "createdAt": "2026-11-01T08:30:00.000Z"
+  },
+  {
+    "id": "tch-unity-01",
+    "username": "gv_unity",
+    "password": "123",
+    "name": "Thầy Kiên (Lớp Game Unity)",
+    "role": "teacher",
+    "assignedClasses": [
+      "Unity"
+    ],
+    "createdAt": "2026-11-01T08:40:00.000Z"
+  }
+]

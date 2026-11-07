@@ -73,6 +73,8 @@ export interface Student {
   id: string;
   name: string;
   classId: ClassType;
+  teacherId?: string;
+  teacherName?: string;
   avatar: string;
   createdAt: string;
   lastActive: string;
@@ -89,11 +91,15 @@ export interface LoginRequestBody {
   studentId?: string;
   name?: string;
   classId?: ClassType;
+  teacherId?: string;
+  teacherName?: string;
 }
 
 export interface CreateStudentRequestBody {
   name: string;
   classId: ClassType;
+  teacherId?: string;
+  teacherName?: string;
 }
 
 export interface SubmissionRequestBody {

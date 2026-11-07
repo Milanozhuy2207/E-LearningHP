@@ -3,7 +3,9 @@
     "id": "std-web-1",
     "name": "Nguyễn Hoàng Nam",
     "classId": "Web",
-    "avatar": "⚡",
+    "teacherId": "tch-web-01",
+    "teacherName": "Cô Thảo (Lớp Web JS)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:00:00.000Z",
     "lastActive": "2026-10-11T14:20:00.000Z",
     "progress": {
@@ -34,7 +36,9 @@
     "id": "std-web-2",
     "name": "Trần Thị Mai Anh",
     "classId": "Web",
-    "avatar": "🚀",
+    "teacherId": "tch-web-01",
+    "teacherName": "Cô Thảo (Lớp Web JS)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:05:00.000Z",
     "lastActive": "2026-11-05T13:56:56.721Z",
     "progress": {
@@ -58,7 +62,9 @@
     "id": "std-web-3",
     "name": "Lê Quốc Huy",
     "classId": "Web",
-    "avatar": "🧑‍💻",
+    "teacherId": "tch-web-01",
+    "teacherName": "Cô Thảo (Lớp Web JS)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:10:00.000Z",
     "lastActive": "2026-10-11T12:30:00.000Z",
     "progress": {
@@ -75,16 +81,20 @@
     "id": "std-web-4",
     "name": "Vũ Thùy Trang",
     "classId": "Web",
-    "avatar": "🌟",
+    "teacherId": "tch-web-01",
+    "teacherName": "Cô Thảo (Lớp Web JS)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:15:00.000Z",
-    "lastActive": "2026-10-11T09:00:00.000Z",
+    "lastActive": "2026-11-07T05:56:39.904Z",
     "progress": {}
   },
   {
     "id": "std-py-1",
     "name": "Đặng Minh Khang",
     "classId": "Python",
-    "avatar": "🐍",
+    "teacherId": "tch-python-01",
+    "teacherName": "Thầy Hoàng (Lớp Python)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:00:00.000Z",
     "lastActive": "2026-10-11T08:38:32.979Z",
     "progress": {
@@ -108,7 +118,9 @@
     "id": "std-py-2",
     "name": "Bùi Gia Bảo",
     "classId": "Python",
-    "avatar": "🤖",
+    "teacherId": "tch-python-01",
+    "teacherName": "Thầy Hoàng (Lớp Python)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:05:00.000Z",
     "lastActive": "2026-10-11T11:20:00.000Z",
     "progress": {
@@ -125,7 +137,9 @@
     "id": "std-py-3",
     "name": "Hoàng Thảo My",
     "classId": "Python",
-    "avatar": "🌸",
+    "teacherId": "tch-python-01",
+    "teacherName": "Thầy Hoàng (Lớp Python)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:10:00.000Z",
     "lastActive": "2026-10-11T10:15:00.000Z",
     "progress": {}
@@ -134,7 +148,9 @@
     "id": "std-uni-1",
     "name": "Phan Anh Quân",
     "classId": "Unity",
-    "avatar": "🎮",
+    "teacherId": "tch-unity-01",
+    "teacherName": "Thầy Kiên (Lớp Game Unity)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:00:00.000Z",
     "lastActive": "2026-10-11T08:38:17.659Z",
     "progress": {
@@ -172,7 +188,9 @@
     "id": "std-uni-2",
     "name": "Tạ Quang Dũng",
     "classId": "Unity",
-    "avatar": "👾",
+    "teacherId": "tch-unity-01",
+    "teacherName": "Thầy Kiên (Lớp Game Unity)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:05:00.000Z",
     "lastActive": "2026-10-11T14:30:00.000Z",
     "progress": {
@@ -189,9 +207,11 @@
     "id": "std-uni-3",
     "name": "Trương Mỹ Linh",
     "classId": "Unity",
-    "avatar": "✨",
+    "teacherId": "tch-unity-01",
+    "teacherName": "Thầy Kiên (Lớp Game Unity)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:10:00.000Z",
-    "lastActive": "2026-11-05T13:57:18.424Z",
+    "lastActive": "2026-11-05T14:51:02.026Z",
     "progress": {
       "uni-1": {
         "status": "passed",
@@ -206,9 +226,11 @@
     "id": "std-rob-1",
     "name": "Phạm Gia Hưng",
     "classId": "Robotics",
-    "avatar": "🤖",
+    "teacherId": "tch-robotics-01",
+    "teacherName": "Thầy Minh (Lớp VEX GO - Ca Sáng)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:00:00.000Z",
-    "lastActive": "2026-11-05T14:16:50.585Z",
+    "lastActive": "2026-11-05T14:26:56.365Z",
     "progress": {
       "rob-1": {
         "status": "passed",
@@ -233,10 +255,10 @@
       },
       "rob-4": {
         "status": "passed",
-        "code": "=== BÀI LÀM TỪ VỰNG & KHỐI LỆNH VEX GO CỦA HỌC SINH (Từ Vựng Buổi 2 (Phần 2): Cảm Biến Va Chạm LED Bumper) ===\n✅ 1. Cụm từ nào có nghĩa là \"đợi cho đến khi\"? -> Chọn: [wait until]\n✅ 2. Từ nào có nghĩa là \"cảm biến bumber\" (nút cảm biến có đèn LED)? -> Chọn: [LEDbumber]\n✅ 3. Từ nào có nghĩa là \"được nhấn\"? -> Chọn: [pressed]\n✅ 4. Khi ghép \"LEDbumber pressed\", câu này có nghĩa tiếng Việt là gì? -> Chọn: [cảm biến bumber được nhấn]\n✅ Khối lệnh VEXcode đã lắp: [wait until] -> [LEDbumber] -> [pressed]\n// KID_STATE:{\"quiz\":{\"q1\":\"wait until\",\"q2\":\"LEDbumber\",\"q3\":\"pressed\",\"q4\":\"cảm biến bumber được nhấn\"},\"slots\":[\"wait until\",\"LEDbumber\",\"pressed\"]}",
-        "attempts": 1,
+        "code": "=== BÀI LÀM QUIZLET VEX GO & VEX IQ CỦA HỌC SINH (Từ Vựng Buổi 2 (Phần 2): Cảm Biến Va Chạm LED Bumper) ===\n📚 Tiến độ phần Học (Learn): Đã nắm vững 0/3 từ\n--- Phần 1: Câu hỏi Đúng / Sai (True / False) ---\n✅ [wait until = đợi cho đến khi] -> Chọn: [Đúng] (Đáp án: Đúng)\n✅ [LEDbumber = được nhấn] -> Chọn: [Sai] (Đáp án: Sai)\n--- Phần 2: Trắc nghiệm Từ vựng (Multiple Choice) ---\n✅ 1. Cụm từ nào có nghĩa là \"đợi cho đến khi\"? -> Chọn: [wait until]\n✅ 2. Từ nào có nghĩa là \"cảm biến bumber\" (nút cảm biến có đèn LED)? -> Chọn: [LEDbumber]\n✅ 3. Từ nào có nghĩa là \"được nhấn\"? -> Chọn: [pressed]\n✅ 4. Khi ghép \"LEDbumber pressed\", câu này có nghĩa tiếng Việt là gì? -> Chọn: [cảm biến bumber được nhấn]\n--- Phần 3: Ghép Khối Lệnh VEXcode (Matching) ---\n✅ Khối lệnh VEXcode đã lắp: [wait until] -> [LEDbumber] -> [pressed]\n// KID_STATE:{\"tf\":{\"tf_1\":\"Đúng\",\"tf_2\":\"Sai\"},\"quiz\":{\"q1\":\"wait until\",\"q2\":\"LEDbumber\",\"q3\":\"pressed\",\"q4\":\"cảm biến bumber được nhấn\"},\"slots\":[\"wait until\",\"LEDbumber\",\"pressed\"],\"mastered\":[]}",
+        "attempts": 2,
         "passedAt": "2026-11-05T14:16:50.585Z",
-        "lastSubmittedAt": "2026-11-05T14:16:50.585Z"
+        "lastSubmittedAt": "2026-11-05T14:26:56.365Z"
       }
     }
   },
@@ -244,7 +266,9 @@
     "id": "std-rob-2",
     "name": "Lê Bảo Ngọc",
     "classId": "Robotics",
-    "avatar": "🎯",
+    "teacherId": "tch-robotics-02",
+    "teacherName": "Cô Lan (Lớp VEX GO - Ca Chiều)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:05:00.000Z",
     "lastActive": "2026-10-11T13:20:00.000Z",
     "progress": {
@@ -261,7 +285,9 @@
     "id": "std-rob-3",
     "name": "Ngô Đức Minh",
     "classId": "Robotics",
-    "avatar": "🔥",
+    "teacherId": "tch-robotics-02",
+    "teacherName": "Cô Lan (Lớp VEX GO - Ca Chiều)",
+    "avatar": "user",
     "createdAt": "2026-10-11T08:12:00.000Z",
     "lastActive": "2026-10-11T11:45:00.000Z",
     "progress": {}
@@ -270,9 +296,26 @@
     "id": "std-robotics-1793886616178",
     "name": "huyy",
     "classId": "Robotics",
-    "avatar": "🎯",
+    "teacherId": "tch-robotics-01",
+    "teacherName": "Thầy Minh (Lớp VEX GO - Ca Sáng)",
+    "avatar": "user",
     "createdAt": "2026-11-05T13:50:16.180Z",
-    "lastActive": "2026-11-05T13:50:16.180Z",
-    "progress": {}
+    "lastActive": "2026-11-07T06:58:15.740Z",
+    "progress": {
+      "rob-1": {
+        "status": "passed",
+        "code": "=== BÀI LÀM QUIZLET VEX GO & VEX IQ CỦA HỌC SINH (Từ Vựng Buổi 1 (Phần 1): Khởi Động & Quay Động Cơ) ===\nTiến độ phần Học (Learn): Đã nắm vững 7/7 từ\n--- Phần 1: Câu hỏi Đúng / Sai (True / False) ---\n[ĐÚNG] [when = khi] -> Chọn: [Đúng]\n[ĐÚNG] [start = động cơ] -> Chọn: [Sai]\n--- Phần 2: Trắc nghiệm Từ vựng (Multiple Choice) ---\n[ĐÚNG] 1. Từ nào có nghĩa là \"khi\" (ví dụ: khi bắt đầu)? -> Chọn: [when]\n[ĐÚNG] 2. Từ nào có nghĩa là \"bắt đầu\"? -> Chọn: [start]\n[ĐÚNG] 3. Từ nào có nghĩa là \"động cơ\"? -> Chọn: [motor]\n[ĐÚNG] 4. Từ nào có nghĩa là \"quay, quay tròn\"? -> Chọn: [spin]\n[ĐÚNG] 5. Từ nào có nghĩa là \"phía trước / đi về phía trước\"? -> Chọn: [forward]\n[ĐÚNG] 6. Từ nào có nghĩa là \"đảo ngược / đi lùi, ngược lại\"? -> Chọn: [reverse]\n[ĐÚNG] 7. Từ nào có nghĩa là \"dừng lại\"? -> Chọn: [stop]\n--- Phần 3: Ghép Khối Lệnh VEXcode (Matching) ---\n[ĐÚNG] Khối lệnh VEXcode đã lắp: [spin] -> [motor] -> [forward]\n// KID_STATE:{\"tf\":{\"tf_1\":\"Đúng\",\"tf_2\":\"Sai\"},\"quiz\":{\"q1\":\"when\",\"q2\":\"start\",\"q3\":\"motor\",\"q4\":\"spin\",\"q5\":\"forward\",\"q6\":\"reverse\",\"q7\":\"stop\"},\"slots\":[\"spin\",\"motor\",\"forward\"],\"mastered\":[0,1,2,3,4,5,6]}",
+        "attempts": 1,
+        "passedAt": "2026-11-05T14:53:28.123Z",
+        "lastSubmittedAt": "2026-11-05T14:53:28.123Z"
+      },
+      "rob-2": {
+        "status": "failed",
+        "code": "// Bài nộp Thực hành VEXcode GO 2D - Từ Vựng Buổi 1 (Phần 2): Vận Tốc, Góc Độ & Thời Gian Đợi\n// Đề thực hành: Đề 1 (Thầy Cô Giao): Tăng Vận Tốc 80% & Đợi 1 Giây\nwhen started:\n  1. drive forward for 800 mm\n// Kết quả Robot: Dừng tại ô (4, 2) - Đích (3, 2) -> CHƯA ĐẠT",
+        "attempts": 2,
+        "passedAt": null,
+        "lastSubmittedAt": "2026-11-07T06:58:15.740Z"
+      }
+    }
   }
 ]
