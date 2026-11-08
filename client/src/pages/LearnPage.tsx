@@ -1283,13 +1283,13 @@ print("---MINDX_VARS---" + json.dumps(_out_vars))
                         }`}
                         onClick={() => setRoboticsSection('vocab')}
                       >
-                        <TbCards size={20} />
+                        <TbCards size={22} />
                         <div>
                           <div className="robotics-stage-btn-title">
-                            PHẦN 1: HỌC TỪ MỚI (QUIZLET)
+                            BƯỚC 1: HỌC TỪ VỰNG KHỐI LỆNH
                           </div>
                           <div className="robotics-stage-btn-sub">
-                            Thẻ ghi nhớ &bull; Học &bull; Kiểm tra ({vocabList.length} từ)
+                            Thẻ ghi nhớ &bull; Học &bull; Kiểm tra ({vocabList.length} từ mới)
                           </div>
                         </div>
                       </button>
@@ -1301,15 +1301,36 @@ print("---MINDX_VARS---" + json.dumps(_out_vars))
                         }`}
                         onClick={() => setRoboticsSection('practice')}
                       >
-                        <TbRobot size={22} />
+                        <TbRobot size={24} />
                         <div>
                           <div className="robotics-stage-btn-title">
-                            PHẦN 2: THỰC HÀNH &amp; ĐỀ THẦY CÔ GIAO
+                            BƯỚC 2: THỰC HÀNH &amp; BÀI TẬP VỀ NHÀ 2D
                           </div>
                           <div className="robotics-stage-btn-sub">
-                            Lắp ghép khối lệnh VEXcode GO &amp; Sa bàn Robot 2D
+                            Lắp ghép VEXcode GO &amp; Làm đề của {student.teacherName || 'Thầy/Cô'}
                           </div>
                         </div>
+                      </button>
+                    </div>
+
+                    <div className="robotics-lesson-nav-pills">
+                      <button
+                        type="button"
+                        className="btn-friendly-lesson-nav"
+                        disabled={currentLessonIndex === 0}
+                        onClick={() => handleSelectLesson(currentLessonIndex - 1)}
+                      >
+                        <LuArrowLeft size={15} />
+                        <span>Buổi trước</span>
+                      </button>
+                      <button
+                        type="button"
+                        className="btn-friendly-lesson-nav"
+                        disabled={currentLessonIndex >= lessons.length - 1}
+                        onClick={() => handleSelectLesson(currentLessonIndex + 1)}
+                      >
+                        <span>Buổi tiếp theo</span>
+                        <LuArrowRight size={15} />
                       </button>
                     </div>
                   </div>

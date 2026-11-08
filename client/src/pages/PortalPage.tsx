@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {
   LuUser,
-  LuZap,
+  LuSparkles,
   LuSearch,
   LuPlus,
-  LuCheck
+  LuCheck,
+  LuSmile,
+  LuArrowRight,
+  LuBookOpen
 } from 'react-icons/lu';
 import { ClassIcon, StudentAvatarIcon } from '../components/ClassIcon';
 
@@ -75,7 +78,6 @@ export const PortalPage: React.FC<PortalPageProps> = ({
       .catch(err => console.error('Lỗi tải danh sách giáo viên:', err));
   }, []);
 
-  // Teachers who teach the currently selected class (excluding super_admin unless no specific teacher exists)
   const classTeachers = teachers.filter(
     t => t.role === 'teacher' && t.assignedClasses.includes(selectedClassId)
   );
@@ -106,7 +108,6 @@ export const PortalPage: React.FC<PortalPageProps> = ({
   const currentClassObj = classes.find(c => c.id === selectedClassId);
   const currentTeacherObj = classTeachers.find(t => t.id === selectedTeacherId);
 
-  // Filter students by selectedTeacherId (so each class only sees students of that teacher)
   const studentsByTeacher = selectedTeacherId
     ? studentsInClass.filter(
         s => !s.teacherId || s.teacherId === selectedTeacherId
@@ -139,7 +140,7 @@ export const PortalPage: React.FC<PortalPageProps> = ({
   const handleJoinAsNew = async () => {
     const clean = newStudentName.trim();
     if (!clean) {
-      alert('Vui lòng nhập họ và tên của bạn!');
+      alert('Bạn nhỏ ơi, hãy nhập họ và tên của mình trước khi vào lớp nhé!');
       return;
     }
     try {
@@ -172,7 +173,7 @@ export const PortalPage: React.FC<PortalPageProps> = ({
           <div className="brand-logo">M</div>
           <div className="brand-title">
             <h1>MINDX TECHNOLOGY SCHOOL</h1>
-            <p>Cổng Học Tập &amp; Bài Tập Về Nhà Dành Cho Học Sinh</p>
+            <p>Không Gian Học Tập &amp; Sáng Tạo Thân Thiện Cho Học Sinh</p>
           </div>
         </div>
       </header>
@@ -180,59 +181,66 @@ export const PortalPage: React.FC<PortalPageProps> = ({
       <main className="portal-main">
         <div className="hero-banner">
           <div className="hero-badge">
-            <LuZap size={16} className="react-icon" />
-            <span>CHÀO MỪNG CÁC BẠN HỌC SINH MINDX</span>
+            <LuSparkles size={16} className="react-icon" />
+            <span>CHÀO MỪNG BẠN ĐẾN VỚI LỚP HỌC CÔNG NGHỆ MINDX</span>
           </div>
           <h2>
-            Vào Lớp &amp; <span>Làm Bài Tập Theo Giáo Viên</span>
+            Hôm Nay Mình Cùng <span>Khám Phá &amp; Sáng Tạo</span> Nhé!
           </h2>
           <p>
-            Chọn bộ môn, chọn đúng Thầy/Cô phụ trách lớp của bạn để nhận đúng đề bài tập về nhà nhé!
+            Chỉ với 3 bước đơn giản bên dưới để vào đúng lớp của Thầy/Cô và nhận bài tập về nhà hôm nay.
           </p>
         </div>
 
-        {/* Bước 1: Chọn bộ môn học */}
-        <div>
+        {/* Bước 1: Chọn môn học */}
+        <div className="friendly-step-section">
           <div className="section-title">
             <div className="step-number">1</div>
-            <h3>Chọn Bộ Môn Học Của Bạn:</h3>
+            <div>
+              <h3>Chọn Môn Học Yêu Thích Của Bạn</h3>
+              <p className="step-subtitle">Bấm vào thẻ môn học mà bạn đang theo học tại MindX</p>
+            </div>
           </div>
           <div className="classes-grid">
-            {classes.map(c => (
-              <div
-                key={c.id}
-                className={`class-card ${c.id.toLowerCase()} ${
-                  c.id === selectedClassId ? 'active' : ''
-                }`}
-                onClick={() => setSelectedClassId(c.id)}
-              >
-                <div className="class-card-header">
-                  <div className="class-icon">
-                    <ClassIcon name={c.icon || c.id} size={30} />
+            {classes.map(c => {
+              const isSelected = c.id === selectedClassId;
+              return (
+                <div
+                  key={c.id}
+                  className={`class-card ${c.id.toLowerCase()} ${
+                    isSelected ? 'active' : ''
+                  }`}
+                  onClick={() => setSelectedClassId(c.id)}
+                >
+                  <div className="class-card-header">
+                    <div className="class-icon">
+                      <ClassIcon name={c.icon || c.id} size={30} />
+                    </div>
+                    <span className="class-count">
+                      {isSelected ? 'Đang chọn' : `${c.studentCount || 0} bạn`}
+                    </span>
                   </div>
-                  <span className="class-count">{c.studentCount || 0} học sinh</span>
+                  <h4>{c.name}</h4>
+                  <p>{c.description}</p>
                 </div>
-                <h4>{c.name}</h4>
-                <p>{c.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
-        {/* Bước 2: Chọn Giáo viên phụ trách lớp (để học & làm đúng bài tập về nhà của giáo viên đó) */}
+        {/* Bước 2: Chọn Giáo viên phụ trách lớp */}
         {classTeachers.length > 0 && (
-          <div>
+          <div className="friendly-step-section">
             <div className="section-title">
               <div className="step-number">2</div>
-              <h3>Chọn Giáo Viên Phụ Trách Lớp Của Bạn (Để Nhận Đúng Bài Tập Về Nhà):</h3>
+              <div>
+                <h3>Chọn Lớp Của Thầy/Cô Đang Dạy Bạn</h3>
+                <p className="step-subtitle">
+                  Chọn đúng Thầy/Cô để nhận đúng Bài Tập Về Nhà &amp; Đề Thực Hành của lớp mình nhé!
+                </p>
+              </div>
             </div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                gap: 14
-              }}
-            >
+            <div className="teacher-select-grid">
               {classTeachers.map(t => {
                 const isSelected = t.id === selectedTeacherId;
                 const countInTeacherClass = studentsInClass.filter(
@@ -241,79 +249,26 @@ export const PortalPage: React.FC<PortalPageProps> = ({
                 return (
                   <div
                     key={t.id}
+                    className={`teacher-select-card ${isSelected ? 'active' : ''}`}
                     onClick={() => setSelectedTeacherId(t.id)}
-                    style={{
-                      background: isSelected
-                        ? 'rgba(56, 189, 248, 0.14)'
-                        : 'var(--card-dark)',
-                      border: isSelected
-                        ? '2px solid #38bdf8'
-                        : '1.5px solid var(--border-dark)',
-                      borderRadius: 14,
-                      padding: '16px 18px',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      gap: 12,
-                      transition: 'all 0.2s'
-                    }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                      <div
-                        style={{
-                          width: 44,
-                          height: 44,
-                          borderRadius: 12,
-                          background: isSelected
-                            ? 'rgba(56, 189, 248, 0.22)'
-                            : 'rgba(255,255,255,0.05)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: '#38bdf8'
-                        }}
-                      >
+                    <div className="teacher-select-left">
+                      <div className="teacher-select-avatar">
                         <LuUser size={22} />
                       </div>
                       <div>
-                        <div
-                          style={{
-                            fontWeight: 900,
-                            fontSize: '0.96rem',
-                            color: '#ffffff'
-                          }}
-                        >
-                          {t.name}
-                        </div>
-                        <div
-                          style={{
-                            fontSize: '0.8rem',
-                            color: isSelected ? '#7dd3fc' : 'var(--text-muted)',
-                            marginTop: 2,
-                            fontWeight: 700
-                          }}
-                        >
-                          {countInTeacherClass} học sinh • Có bộ Bài tập về nhà riêng
+                        <div className="teacher-select-name">{t.name}</div>
+                        <div className="teacher-select-meta">
+                          <LuBookOpen size={13} />
+                          <span>
+                            {countInTeacherClass} bạn học sinh &bull; Bài tập về nhà riêng của lớp
+                          </span>
                         </div>
                       </div>
                     </div>
-                    {isSelected && (
-                      <span
-                        style={{
-                          width: 28,
-                          height: 28,
-                          borderRadius: '50%',
-                          background: '#38bdf8',
-                          color: '#020617',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          justifyContent: 'center'
-                        }}
-                      >
-                        <LuCheck size={16} />
-                      </span>
-                    )}
+                    <div className={`teacher-select-check ${isSelected ? 'active' : ''}`}>
+                      <LuCheck size={16} />
+                    </div>
                   </div>
                 );
               })}
@@ -322,39 +277,35 @@ export const PortalPage: React.FC<PortalPageProps> = ({
         )}
 
         {/* Bước 3: Chọn tên học sinh */}
-        <div>
+        <div className="friendly-step-section">
           <div className="section-title">
             <div className="step-number">{classTeachers.length > 0 ? 3 : 2}</div>
-            <h3>
-              Chọn Tên Bạn Trong Danh Sách Lớp:{' '}
-              {currentClassObj && (
-                <span
-                  style={{
-                    color: 'var(--mindx-red)',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 6,
-                    verticalAlign: 'middle'
-                  }}
-                >
-                  <ClassIcon name={currentClassObj.icon || currentClassObj.id} size={18} />
-                  <span>
-                    {currentClassObj.name}
-                    {currentTeacherObj ? ` — ${currentTeacherObj.name}` : ''}
+            <div>
+              <h3>
+                Bấm Vào Tên Của Bạn Để Vào Lớp Ngay{' '}
+                {currentTeacherObj && (
+                  <span className="selected-teacher-inline">
+                    ({currentTeacherObj.name})
                   </span>
-                </span>
-              )}
-            </h3>
+                )}
+              </h3>
+              <p className="step-subtitle">
+                Tìm tên của bạn trong danh sách bên dưới hoặc nhập tên mới nếu đây là buổi đầu tiên
+              </p>
+            </div>
           </div>
 
           <div className="student-roster-box">
             <div className="roster-header">
-              <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                {loadingRoster
-                  ? 'Đang tải danh sách học sinh...'
-                  : `Danh sách ${studentsByTeacher.length} học sinh ${
-                      currentTeacherObj ? `thuộc ${currentTeacherObj.name}` : `lớp ${selectedClassId}`
-                    }:`}
+              <span className="roster-count-label">
+                <LuSmile size={18} color="#fbbf24" />
+                <span>
+                  {loadingRoster
+                    ? 'Đang mở sổ điểm danh lớp...'
+                    : `Có ${studentsByTeacher.length} bạn trong lớp ${
+                        currentTeacherObj ? currentTeacherObj.name : selectedClassId
+                      }:`}
+                </span>
               </span>
               <div className="search-input-box">
                 <span className="search-icon">
@@ -364,22 +315,15 @@ export const PortalPage: React.FC<PortalPageProps> = ({
                   type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  placeholder="Tìm kiếm tên của bạn..."
+                  placeholder="Gõ tên của bạn để tìm nhanh..."
                 />
               </div>
             </div>
 
             <div className="students-cards-grid">
               {filteredStudents.length === 0 ? (
-                <div
-                  style={{
-                    gridColumn: '1 / -1',
-                    padding: 24,
-                    textAlign: 'center',
-                    color: 'var(--text-muted)'
-                  }}
-                >
-                  Chưa có học sinh nào trong lớp này. Hãy nhập tên ở phía dưới để tham gia lớp của{' '}
+                <div className="empty-roster-friendly">
+                  Chưa thấy tên của bạn trong lớp này. Hãy nhập tên vào ô bên dưới để vào lớp của{' '}
                   <strong>{currentTeacherObj ? currentTeacherObj.name : selectedClassId}</strong> nhé!
                 </div>
               ) : (
@@ -395,21 +339,16 @@ export const PortalPage: React.FC<PortalPageProps> = ({
                     <div className="student-info-box">
                       <div className="student-name-text">{std.name}</div>
                       {std.teacherName && (
-                        <div
-                          style={{
-                            fontSize: '0.73rem',
-                            color: '#38bdf8',
-                            fontWeight: 700,
-                            marginBottom: 2
-                          }}
-                        >
+                        <div className="student-teacher-sub">
                           GV: {std.teacherName}
                         </div>
                       )}
                       <div className="student-progress-text">
-                        Tiến độ: {std.percent || 0}% ({std.passedCount || 0}/
-                        {std.totalLessons || 7} bài)
+                        Đã hoàn thành: <strong>{std.passedCount || 0}/{std.totalLessons || 7} bài</strong> ({std.percent || 0}%)
                       </div>
+                    </div>
+                    <div className="student-enter-arrow" title="Vào học ngay">
+                      <LuArrowRight size={16} />
                     </div>
                   </div>
                 ))
@@ -417,11 +356,11 @@ export const PortalPage: React.FC<PortalPageProps> = ({
             </div>
 
             <div className="new-student-form-box">
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                <LuUser size={16} color="#38bdf8" className="react-icon" />
+              <span className="new-student-label">
+                <LuUser size={18} color="#38bdf8" className="react-icon" />
                 <span>
-                  Bạn là học sinh mới của{' '}
-                  <strong style={{ color: '#38bdf8' }}>
+                  Bạn mới vào lớp của{' '}
+                  <strong style={{ color: '#7dd3fc' }}>
                     {currentTeacherObj ? currentTeacherObj.name : `Lớp ${selectedClassId}`}
                   </strong>
                   ?
@@ -435,11 +374,11 @@ export const PortalPage: React.FC<PortalPageProps> = ({
                 onKeyDown={e => {
                   if (e.key === 'Enter') handleJoinAsNew();
                 }}
-                placeholder="Nhập họ và tên của bạn..."
+                placeholder="Nhập họ và tên của bạn vào đây..."
               />
               <button type="button" className="btn-join" onClick={handleJoinAsNew}>
                 <LuPlus size={16} className="react-icon" />
-                <span>Tham Gia Lớp</span>
+                <span>Vào Lớp Học Ngay</span>
               </button>
             </div>
           </div>
